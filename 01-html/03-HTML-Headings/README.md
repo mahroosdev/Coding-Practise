@@ -78,3 +78,4 @@ After completing this lesson, you should know:
 * `<h1>` is the largest heading.
 * `<h6>` is the smallest heading.
 * Heading text can be changed to display any title you want.
+
