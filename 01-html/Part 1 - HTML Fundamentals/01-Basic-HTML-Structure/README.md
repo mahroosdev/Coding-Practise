@@ -127,7 +127,7 @@ Create another HTML file and practice by changing:
 
 * The page title
 * The heading
-* The paragraph
+* The paragraph 
 
 Save the file and refresh your browser to see the changes.
 
