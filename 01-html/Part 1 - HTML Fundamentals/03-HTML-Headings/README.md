@@ -23,7 +23,7 @@ The browser displays each heading with a different size.
 
 ```html
 <h1>Heading</h1>
-```
+``` 
 
 Replace **Heading** with the text you want to display.
 
