@@ -13,7 +13,7 @@ HTML uses the `<p>` tag to create paragraphs.
 A paragraph is used to display normal text on a webpage.
 
 Every paragraph starts with an opening `<p>` tag and ends with a closing `</p>` tag.
-
+ 
 ---
 
 ## Syntax
