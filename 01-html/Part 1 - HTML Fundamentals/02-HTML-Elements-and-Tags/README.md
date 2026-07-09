@@ -24,7 +24,7 @@ Another example:
 
 ```html
 <p>
-```
+``` 
 
 This is also an HTML tag.
 
