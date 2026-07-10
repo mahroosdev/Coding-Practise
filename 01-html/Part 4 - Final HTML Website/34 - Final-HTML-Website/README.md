@@ -153,4 +153,4 @@ The next step is to improve this project by adding:
 
 ## License
 
-This project was created for learning and educational purposes.
+This project was created for learning and educational purposes. 
