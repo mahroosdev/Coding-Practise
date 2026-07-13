@@ -1,0 +1,24 @@
+body {
+    background-color: lightgray;
+}
+
+h1 {
+    color: darkblue;
+}
+
+.color-name {
+    color: green;
+}
+
+.hex-color {
+    color: #8b0000;
+}
+
+.rgb-color {
+    color: rgb(128, 0, 128);
+}
+
+.background-example {
+    color: black;
+    background-color: lightyellow;
+}
