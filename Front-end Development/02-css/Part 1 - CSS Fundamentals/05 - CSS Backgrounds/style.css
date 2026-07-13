@@ -1,0 +1,19 @@
+body {
+    background-color: lightgray;
+}
+
+h1 {
+    color: darkblue;
+}
+
+.color-background {
+    background-color: lightyellow;
+}
+
+.image-background {
+    background-image: url("images/background-image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
