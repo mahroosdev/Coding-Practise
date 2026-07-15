@@ -1,0 +1,56 @@
+body {
+    background-color: lightgray;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+section {
+    width: 500px;
+    background-color: white;
+    border: 2px solid darkblue;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+label {
+    display: block;
+    color: darkblue;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gray;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: darkblue;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    color: white;
+    background-color: darkblue;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: darkgreen;
+}
