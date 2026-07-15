@@ -1,0 +1,52 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: lightgray;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    border: 2px solid darkblue;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.pixel-box,
+.percentage-box,
+.em-box,
+.rem-box,
+.viewport-box {
+    background-color: lightyellow;
+    border: 2px solid darkgreen;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.pixel-box {
+    width: 300px;
+    font-size: 18px;
+}
+
+.percentage-box {
+    width: 70%;
+}
+
+.em-box {
+    font-size: 1.5em;
+}
+
+.rem-box {
+    font-size: 1.5rem;
+}
+
+.viewport-box {
+    width: 50vw;
+}
