@@ -1,0 +1,55 @@
+body {
+    background-color: lightgray;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    border: 2px solid darkblue;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.arial-font {
+    font-family: Arial, sans-serif;
+}
+
+.georgia-font {
+    font-family: Georgia, serif;
+}
+
+.monospace-font {
+    font-family: "Courier New", monospace;
+}
+
+.small-text {
+    font-size: 14px;
+}
+
+.medium-text {
+    font-size: 18px;
+}
+
+.large-text {
+    font-size: 28px;
+}
+
+.normal-text {
+    font-weight: normal;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.normal-style {
+    font-style: normal;
+}
+
+.italic-style {
+    font-style: italic;
+}
