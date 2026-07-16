@@ -1,0 +1,176 @@
+:root {
+    --primary-color: darkblue;
+    --secondary-color: #1f4f8a;
+    --page-background: lightgray;
+    --section-background: white;
+    --text-color: #333333;
+    --light-background: #e6ecf5;
+    --main-spacing: 30px;
+    --small-spacing: 15px;
+    --border-size: 2px;
+    --heading-size: 28px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--page-background);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--section-background);
+    padding: var(--main-spacing);
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+}
+
+.intro-section {
+    background-color: var(--section-background);
+    border: var(--border-size) solid var(--primary-color);
+    margin: var(--main-spacing) 0;
+    padding: var(--main-spacing);
+    text-align: center;
+}
+
+.intro-section h2 {
+    color: var(--primary-color);
+    font-size: var(--heading-size);
+}
+
+.learn-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--section-background);
+    margin-top: var(--small-spacing);
+    padding: 10px 18px;
+    text-decoration: none;
+}
+
+.learn-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.features-section {
+    background-color: var(--section-background);
+    border: var(--border-size) solid var(--primary-color);
+    margin-bottom: var(--main-spacing);
+    padding: var(--main-spacing);
+}
+
+.features-section h2 {
+    color: var(--primary-color);
+    font-size: var(--heading-size);
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+}
+
+.feature-card {
+    flex: 1;
+    background-color: var(--light-background);
+    border-left: 5px solid var(--primary-color);
+    padding: 20px;
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+}
+
+.example-section {
+    display: flex;
+    gap: var(--main-spacing);
+    background-color: var(--section-background);
+    border: var(--border-size) solid var(--primary-color);
+    margin-bottom: var(--main-spacing);
+    padding: var(--main-spacing);
+}
+
+.example-content {
+    flex: 2;
+}
+
+.example-content h2 {
+    color: var(--primary-color);
+    font-size: var(--heading-size);
+}
+
+.example-box {
+    flex: 1;
+    background-color: var(--light-background);
+    border-left: 5px solid var(--primary-color);
+    padding: 20px;
+}
+
+.example-box h3 {
+    color: var(--primary-color);
+}
+
+.example-box code {
+    display: block;
+    background-color: var(--primary-color);
+    color: var(--section-background);
+    padding: 10px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--section-background);
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .card-container {
+        flex-direction: column;
+    }
+
+    .example-section {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    :root {
+        --main-spacing: 20px;
+        --heading-size: 23px;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .learn-button {
+        width: 100%;
+    }
+}

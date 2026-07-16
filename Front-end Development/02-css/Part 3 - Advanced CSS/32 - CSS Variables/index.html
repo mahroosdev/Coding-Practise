@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Variables</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>CSS Variables</h1>
+
+            <p>
+                Reusing the same CSS values in different parts of a webpage.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="intro-section">
+            <h2>What Are CSS Variables?</h2>
+
+            <p>
+                CSS variables allow us to save colors, spacing, and other
+                CSS values so we can reuse them throughout the stylesheet.
+            </p>
+
+            <a href="#features" class="learn-button">Learn More</a>
+        </section>
+
+        <section class="features-section" id="features">
+            <h2>Why Use CSS Variables?</h2>
+
+            <div class="card-container">
+
+                <div class="feature-card">
+                    <h3>Reuse Values</h3>
+
+                    <p>
+                        The same variable can be used in many CSS rules without
+                        writing the original value again.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Easy Changes</h3>
+
+                    <p>
+                        Changing the value of one variable can update many
+                        elements on the webpage.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Cleaner CSS</h3>
+
+                    <p>
+                        Meaningful variable names can make the stylesheet easier
+                        to read and understand.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="example-section">
+            <div class="example-content">
+                <h2>Simple Variable Example</h2>
+
+                <p>
+                    The colors, spacing, border, and heading sizes on this page
+                    are controlled using CSS variables.
+                </p>
+
+                <p>
+                    If a variable value is changed, every CSS rule using that
+                    variable will also use the new value.
+                </p>
+            </div>
+
+            <div class="example-box">
+                <h3>Example</h3>
+
+                <p>Variable declaration:</p>
+
+                <code>--primary-color: darkblue;</code>
+
+                <p>Using the variable:</p>
+
+                <code>color: var(--primary-color);</code>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>CSS Variables Practice</p>
+    </footer>
+
+</body>
+
+</html>
