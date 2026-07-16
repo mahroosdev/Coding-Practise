@@ -1,0 +1,72 @@
+body {
+    background-color: lightgray;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    border: 2px solid darkblue;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.website-link {
+    color: darkblue;
+    font-size: 18px;
+}
+
+.website-link:hover {
+    color: darkred;
+}
+
+.website-link:visited {
+    color: purple;
+}
+
+.action-button {
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: darkgreen;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 300px;
+    border: 2px solid gray;
+    padding: 10px;
+}
+
+input:focus {
+    border-color: darkblue;
+    outline: none;
+}
+
+.paragraph-group p:first-child {
+    color: darkred;
+    font-weight: bold;
+}
+
+.item-list li:last-child {
+    color: darkgreen;
+    font-weight: bold;
+}
+
+.number-list p:nth-child(even) {
+    background-color: lightblue;
+    padding: 10px;
+}
