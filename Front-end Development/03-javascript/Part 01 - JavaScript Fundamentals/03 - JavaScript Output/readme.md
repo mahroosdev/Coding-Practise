@@ -240,7 +240,7 @@ It is useful to recognize the method, but `textContent` is safer for changing te
 ## Comparing Output Methods
 
 | Method | Output Location | Common Purpose |
-|---|---|---|
+| --- | --- | --- |
 | `textContent` | Webpage | Changes text on the page |
 | `console.log()` | Browser console | Displays normal information |
 | `console.warn()` | Browser console | Displays a warning |
@@ -259,19 +259,19 @@ document.getElementById("page-output").textContent =
     "Hello! This message was added using JavaScript.";
 ```
 
-### Normal Console Output
+### Console Output (Normal)
 
 ```javascript
 console.log("JavaScript is working.");
 ```
 
-### Warning Output
+### Warning Console Output
 
 ```javascript
 console.warn("This is a practice warning.");
 ```
 
-### Error Output
+### Error Console Output
 
 ```javascript
 console.error("This is a practice error.");
