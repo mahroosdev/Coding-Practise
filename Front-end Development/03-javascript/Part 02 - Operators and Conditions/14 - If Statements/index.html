@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript If Statements</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>JavaScript If Statements</h1>
+
+            <p>
+                Learning how JavaScript runs code only when a condition
+                is true.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>What Is an If Statement?</h2>
+
+            <p>
+                An <code>if</code> statement checks a condition.
+            </p>
+
+            <p>
+                The code inside the statement runs only when the condition
+                is <code>true</code>.
+            </p>
+
+            <div class="code-box">
+                <code>
+                    if (condition) {
+                        // Code runs here
+                    }
+                </code>
+            </div>
+
+            <div class="output-box" id="introduction-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>1. A True Condition</h2>
+
+            <p>
+                When the condition is true, JavaScript runs the code inside
+                the curly braces.
+            </p>
+
+            <div class="code-box">
+                <code>if (20 &gt; 18)</code>
+            </div>
+
+            <div class="output-box" id="true-condition-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>2. A False Condition</h2>
+
+            <p>
+                When the condition is false, JavaScript skips the code inside
+                the statement.
+            </p>
+
+            <div class="code-box">
+                <code>if (10 &gt; 20)</code>
+            </div>
+
+            <div class="output-box" id="false-condition-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Checking a Variable</h2>
+
+            <p>
+                Variables can be compared inside an if statement.
+            </p>
+
+            <div class="code-box">
+                <code>if (userAge &gt;= minimumAge)</code>
+            </div>
+
+            <div class="output-box" id="age-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Checking Strict Equality</h2>
+
+            <p>
+                Strict equality can check whether a variable contains an
+                expected value and data type.
+            </p>
+
+            <div class="code-box">
+                <code>if (courseName === "JavaScript")</code>
+            </div>
+
+            <div class="output-box" id="equality-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Using Logical AND</h2>
+
+            <p>
+                The AND operator can require two conditions to be true.
+            </p>
+
+            <div class="code-box">
+                <code>if (hasEmail &amp;&amp; hasPassword)</code>
+            </div>
+
+            <div class="output-box" id="and-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>6. Using Logical OR</h2>
+
+            <p>
+                The OR operator runs the block when at least one condition
+                is true.
+            </p>
+
+            <div class="code-box">
+                <code>if (isAdmin || isCreator)</code>
+            </div>
+
+            <div class="output-box" id="or-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>7. Multiple If Statements</h2>
+
+            <p>
+                JavaScript can check several independent conditions using
+                separate if statements.
+            </p>
+
+            <div class="output-box" id="multiple-if-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>If Statement Examples</h2>
+
+            <div class="example-grid">
+
+                <div class="example-card">
+                    <h3>Age Check</h3>
+
+                    <code>age &gt;= 18</code>
+
+                    <p id="age-card-output">
+                        Waiting...
+                    </p>
+                </div>
+
+                <div class="example-card">
+                    <h3>Score Check</h3>
+
+                    <code>score &gt;= 50</code>
+
+                    <p id="score-card-output">
+                        Waiting...
+                    </p>
+                </div>
+
+                <div class="example-card">
+                    <h3>Login Check</h3>
+
+                    <code>isLoggedIn === true</code>
+
+                    <p id="login-card-output">
+                        Waiting...
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>If Statement Summary</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Part</th>
+                            <th>Example</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><code>if</code></td>
+                            <td><code>if (...)</code></td>
+                            <td>Starts the condition</td>
+                        </tr>
+
+                        <tr>
+                            <td>Parentheses</td>
+                            <td><code>(score &gt;= 50)</code></td>
+                            <td>Contains the condition</td>
+                        </tr>
+
+                        <tr>
+                            <td>Curly braces</td>
+                            <td><code>{ ... }</code></td>
+                            <td>Contains the code to run</td>
+                        </tr>
+
+                        <tr>
+                            <td>True condition</td>
+                            <td><code>20 &gt; 18</code></td>
+                            <td>Runs the code block</td>
+                        </tr>
+
+                        <tr>
+                            <td>False condition</td>
+                            <td><code>10 &gt; 20</code></td>
+                            <td>Skips the code block</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Learning Practice</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
