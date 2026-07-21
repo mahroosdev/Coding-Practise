@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Comparison Operators</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>JavaScript Comparison Operators</h1>
+
+            <p>
+                Learning how JavaScript compares values and returns
+                true or false.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>What Is a Comparison Operator?</h2>
+
+            <p>
+                A comparison operator compares two values.
+            </p>
+
+            <p>
+                The result of a comparison is always a boolean value:
+                <code>true</code> or <code>false</code>.
+            </p>
+
+            <div class="code-box">
+                <code>20 &gt; 18</code>
+            </div>
+
+            <div class="output-box" id="introduction-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>1. Greater Than</h2>
+
+            <p>
+                The greater-than operator checks whether the first value is
+                larger than the second value.
+            </p>
+
+            <div class="code-box">
+                <code>20 &gt; 18</code>
+            </div>
+
+            <div class="output-box" id="greater-than-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Less Than</h2>
+
+            <p>
+                The less-than operator checks whether the first value is
+                smaller than the second value.
+            </p>
+
+            <div class="code-box">
+                <code>15 &lt; 20</code>
+            </div>
+
+            <div class="output-box" id="less-than-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Greater Than or Equal To</h2>
+
+            <p>
+                This operator returns true when the first value is greater
+                than or equal to the second value.
+            </p>
+
+            <div class="code-box">
+                <code>18 &gt;= 18</code>
+            </div>
+
+            <div class="output-box" id="greater-equal-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Less Than or Equal To</h2>
+
+            <p>
+                This operator returns true when the first value is smaller
+                than or equal to the second value.
+            </p>
+
+            <div class="code-box">
+                <code>15 &lt;= 18</code>
+            </div>
+
+            <div class="output-box" id="less-equal-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Strict Equality</h2>
+
+            <p>
+                The strict equality operator compares both the value and
+                the data type.
+            </p>
+
+            <div class="code-box">
+                <code>10 === 10</code>
+            </div>
+
+            <div class="output-box" id="strict-equality-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>6. Strict Inequality</h2>
+
+            <p>
+                The strict inequality operator checks whether values or
+                data types are different.
+            </p>
+
+            <div class="code-box">
+                <code>10 !== "10"</code>
+            </div>
+
+            <div class="output-box" id="strict-inequality-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>7. Loose Equality</h2>
+
+            <p>
+                The loose equality operator compares values after allowing
+                JavaScript to convert their data types.
+            </p>
+
+            <div class="code-box">
+                <code>10 == "10"</code>
+            </div>
+
+            <div class="output-box" id="loose-equality-output">
+                JavaScript output will appear here.
+            </div>
+
+            <div class="note-box">
+                <strong>Recommended:</strong>
+                Use strict equality <code>===</code> for clearer comparisons.
+            </div>
+        </section>
+
+        <section>
+            <h2>8. Comparing Strings</h2>
+
+            <p>
+                JavaScript can compare string values. String comparisons
+                are case-sensitive.
+            </p>
+
+            <div class="output-box" id="string-comparison-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>9. Practical Age Check</h2>
+
+            <p>
+                Comparison operators can check whether a user meets a
+                required value.
+            </p>
+
+            <div class="code-box">
+                <code>userAge &gt;= minimumAge</code>
+            </div>
+
+            <div class="output-box" id="age-check-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>Comparison Results</h2>
+
+            <div class="comparison-grid">
+
+                <div class="comparison-card">
+                    <h3>20 &gt; 18</h3>
+                    <p id="card-one-output">Waiting...</p>
+                </div>
+
+                <div class="comparison-card">
+                    <h3>10 &lt; 5</h3>
+                    <p id="card-two-output">Waiting...</p>
+                </div>
+
+                <div class="comparison-card">
+                    <h3>15 === 15</h3>
+                    <p id="card-three-output">Waiting...</p>
+                </div>
+
+                <div class="comparison-card">
+                    <h3>15 === "15"</h3>
+                    <p id="card-four-output">Waiting...</p>
+                </div>
+
+                <div class="comparison-card">
+                    <h3>10 !== 5</h3>
+                    <p id="card-five-output">Waiting...</p>
+                </div>
+
+                <div class="comparison-card">
+                    <h3>"JS" === "js"</h3>
+                    <p id="card-six-output">Waiting...</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Comparison Operator Summary</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Meaning</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><code>&gt;</code></td>
+                            <td>Greater than</td>
+                            <td><code>20 &gt; 18</code></td>
+                        </tr>
+
+                        <tr>
+                            <td><code>&lt;</code></td>
+                            <td>Less than</td>
+                            <td><code>15 &lt; 20</code></td>
+                        </tr>
+
+                        <tr>
+                            <td><code>&gt;=</code></td>
+                            <td>Greater than or equal to</td>
+                            <td><code>18 &gt;= 18</code></td>
+                        </tr>
+
+                        <tr>
+                            <td><code>&lt;=</code></td>
+                            <td>Less than or equal to</td>
+                            <td><code>15 &lt;= 18</code></td>
+                        </tr>
+
+                        <tr>
+                            <td><code>===</code></td>
+                            <td>Strictly equal</td>
+                            <td><code>10 === 10</code></td>
+                        </tr>
+
+                        <tr>
+                            <td><code>!==</code></td>
+                            <td>Strictly not equal</td>
+                            <td><code>10 !== "10"</code></td>
+                        </tr>
+
+                        <tr>
+                            <td><code>==</code></td>
+                            <td>Loosely equal</td>
+                            <td><code>10 == "10"</code></td>
+                        </tr>
+
+                        <tr>
+                            <td><code>!=</code></td>
+                            <td>Loosely not equal</td>
+                            <td><code>10 != "10"</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Learning Practice</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
