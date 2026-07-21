@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Switch Statements</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>JavaScript Switch Statements</h1>
+
+            <p>
+                Learning how JavaScript selects one matching case
+                from several options.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>What Is a Switch Statement?</h2>
+
+            <p>
+                A <code>switch</code> statement compares one value against
+                several possible cases.
+            </p>
+
+            <div class="code-box">
+                <code>switch (value) {
+    case "option":
+        // Code
+        break;
+
+    default:
+        // Fallback code
+}</code>
+            </div>
+
+            <div class="output-box" id="introduction-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>1. Day of the Week</h2>
+
+            <p>
+                A number can be matched with a day name.
+            </p>
+
+            <div class="output-box" id="day-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Traffic Light</h2>
+
+            <p>
+                String values can be matched using separate cases.
+            </p>
+
+            <div class="output-box" id="traffic-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>3. User Role</h2>
+
+            <p>
+                Different user roles can receive different messages.
+            </p>
+
+            <div class="output-box" id="role-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Default Case</h2>
+
+            <p>
+                The default block runs when no case matches.
+            </p>
+
+            <div class="output-box" id="default-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Grouping Cases</h2>
+
+            <p>
+                Several cases can share the same result.
+            </p>
+
+            <div class="output-box" id="group-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>Important Switch Parts</h2>
+
+            <div class="switch-grid">
+
+                <div class="switch-card">
+                    <h3>switch</h3>
+                    <p>Contains the value being checked.</p>
+                </div>
+
+                <div class="switch-card">
+                    <h3>case</h3>
+                    <p>Defines one possible matching value.</p>
+                </div>
+
+                <div class="switch-card">
+                    <h3>break</h3>
+                    <p>Stops JavaScript from running the next case.</p>
+                </div>
+
+                <div class="switch-card">
+                    <h3>default</h3>
+                    <p>Runs when no case matches.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Switch Statement Summary</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Keyword</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><code>switch</code></td>
+                            <td>Starts the value comparison</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>case</code></td>
+                            <td>Defines a possible match</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>break</code></td>
+                            <td>Stops the switch after a match</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>default</code></td>
+                            <td>Handles unmatched values</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Learning Practice</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
