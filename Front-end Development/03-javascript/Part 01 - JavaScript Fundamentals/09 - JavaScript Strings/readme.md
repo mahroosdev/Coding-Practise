@@ -1,45 +1,36 @@
-# 09 - JavaScript Expressions and Statements
+# 09 - JavaScript Strings
 
 ## Introduction
 
 In the previous lesson, I learned about JavaScript operators.
 
-In this lesson, I am learning about JavaScript expressions and statements.
+In this lesson, I am learning about JavaScript strings.
 
-Expressions and statements are two important parts of JavaScript code.
-
-An expression produces a value.
-
-A statement is a complete instruction.
+A string is a value used to store text.
 
 Example:
 
 ```javascript
-const total = 10 + 5;
+const courseName = "JavaScript";
 ```
 
-In this code:
+The value `"JavaScript"` is a string because it is written inside quotation marks.
 
-```javascript
-10 + 5
-```
+Strings can contain:
 
-is an expression.
-
-The complete line:
-
-```javascript
-const total = 10 + 5;
-```
-
-is a statement.
+- Letters
+- Numbers
+- Spaces
+- Symbols
+- Words
+- Sentences
 
 ---
 
 ## Folder Structure
 
 ```text
-09 - JavaScript Expressions and Statements/
+09 - JavaScript Strings/
 │
 ├── index.html
 ├── style.css
@@ -49,793 +40,908 @@ is a statement.
 
 ---
 
-# What Is an Expression?
+# What Is a String?
 
-An expression is JavaScript code that produces a value.
-
-Example:
-
-```javascript
-10 + 5
-```
-
-This expression produces:
-
-```text
-15
-```
-
-Another example:
-
-```javascript
-20 > 18
-```
-
-This expression produces:
-
-```text
-true
-```
-
-Expressions can produce different data types.
-
-They can produce:
-
-- Strings
-- Numbers
-- Booleans
-- Other JavaScript values
-
----
-
-## Number Expression
-
-A number expression produces a number.
+A string is a JavaScript data type used to store text.
 
 Example:
-
-```javascript
-20 + 10
-```
-
-Result:
-
-```text
-30
-```
-
-Another example:
-
-```javascript
-10 * 5
-```
-
-Result:
-
-```text
-50
-```
-
----
-
-## String Expression
-
-A string expression produces text.
-
-Example:
-
-```javascript
-"Java" + "Script"
-```
-
-Result:
-
-```text
-JavaScript
-```
-
-The plus operator joins the two strings.
-
-Another example:
-
-```javascript
-"Hello, " + "Mahroos"
-```
-
-Result:
-
-```text
-Hello, Mahroos
-```
-
----
-
-## Comparison Expression
-
-A comparison expression produces a boolean value.
-
-Example:
-
-```javascript
-20 > 18
-```
-
-Result:
-
-```text
-true
-```
-
-Another example:
-
-```javascript
-10 === "10"
-```
-
-Result:
-
-```text
-false
-```
-
-The values use different data types.
-
----
-
-## Logical Expression
-
-A logical expression also produces a value.
-
-Example:
-
-```javascript
-true && false
-```
-
-Result:
-
-```text
-false
-```
-
-Another example:
-
-```javascript
-true || false
-```
-
-Result:
-
-```text
-true
-```
-
----
-
-## Variable Expression
-
-A variable can be used inside an expression.
-
-Example:
-
-```javascript
-const firstNumber = 10;
-const secondNumber = 5;
-
-const result = firstNumber + secondNumber;
-```
-
-The expression is:
-
-```javascript
-firstNumber + secondNumber
-```
-
-It produces:
-
-```text
-15
-```
-
----
-
-# What Is a Statement?
-
-A statement is a complete instruction that tells JavaScript to perform an action.
-
-Example:
-
-```javascript
-const courseName = "JavaScript";
-```
-
-This statement tells JavaScript to:
-
-1. Create a variable named `courseName`.
-2. Store the string `"JavaScript"` inside it.
-
-Statements often end with a semicolon.
-
-```javascript
-;
-```
-
----
-
-# Variable Declaration Statements
-
-A variable declaration statement creates a variable.
-
-Example using `const`:
 
 ```javascript
 const studentName = "Mahroos";
 ```
 
-Example using `let`:
-
-```javascript
-let lessonNumber = 9;
-```
-
-The entire line is a statement.
-
-The assigned values are expressions.
-
----
-
-## Declaration Without a Value
-
-A variable can be declared without immediately receiving a value.
-
-```javascript
-let nextLesson;
-```
-
-This is still a statement.
-
-The variable initially contains:
-
-```text
-undefined
-```
-
-A value can be assigned later:
-
-```javascript
-nextLesson = "JavaScript Comments";
-```
-
----
-
-# Assignment Statements
-
-An assignment statement gives a value to an existing variable.
-
-Example:
-
-```javascript
-let lessonNumber = 8;
-
-lessonNumber = 9;
-```
-
-The first statement creates the variable.
-
-```javascript
-let lessonNumber = 8;
-```
-
-The second statement changes its value.
-
-```javascript
-lessonNumber = 9;
-```
-
----
-
-## Assignment with an Expression
-
-An assignment can contain an expression.
-
-```javascript
-let score = 10;
-
-score = score + 5;
-```
-
-The expression is:
-
-```javascript
-score + 5
-```
-
-The assignment statement is:
-
-```javascript
-score = score + 5;
-```
-
-The new value becomes:
-
-```text
-15
-```
-
----
-
-# Method Call Statements
-
-A method call can be used as a complete statement.
-
-Example:
-
-```javascript
-console.log("Hello");
-```
-
-This statement tells JavaScript to display a message in the browser console.
-
 Another example:
 
 ```javascript
-document.getElementById("output").textContent = "Hello";
+const jobTitle = "Software Engineer";
 ```
 
-This statement changes the content of an HTML element.
-
----
-
-# Expressions Inside Statements
-
-Expressions are commonly used inside statements.
-
-Example:
+Check the data type:
 
 ```javascript
-const finalScore = 50 + 25;
+console.log(typeof studentName);
 ```
 
-The expression is:
-
-```javascript
-50 + 25
-```
-
-It produces:
+Output:
 
 ```text
-75
-```
-
-The complete statement is:
-
-```javascript
-const finalScore = 50 + 25;
-```
-
-It stores the result inside `finalScore`.
-
----
-
-## Another Example
-
-```javascript
-const firstName = "Mahroos";
-const lastName = "Mahthie";
-
-const fullName = firstName + " " + lastName;
-```
-
-The expression is:
-
-```javascript
-firstName + " " + lastName
-```
-
-It produces:
-
-```text
-Mahroos Mahthie
-```
-
-The statement stores the produced value inside `fullName`.
-
----
-
-# Expression Statements
-
-An expression can sometimes be written as a complete statement.
-
-Example:
-
-```javascript
-counter++;
-```
-
-The expression increases the variable by one.
-
-Because it is written as a complete instruction, it is also an expression statement.
-
-Another example:
-
-```javascript
-score += 5;
-```
-
-This updates the value stored inside `score`.
-
----
-
-# JavaScript Execution Order
-
-JavaScript normally runs statements from top to bottom.
-
-Example:
-
-```javascript
-const firstNumber = 10;
-const secondNumber = 5;
-const answer = firstNumber + secondNumber;
-
-console.log(answer);
-```
-
-JavaScript runs the statements in this order:
-
-### Step 1
-
-```javascript
-const firstNumber = 10;
-```
-
-The variable `firstNumber` stores `10`.
-
-### Step 2
-
-```javascript
-const secondNumber = 5;
-```
-
-The variable `secondNumber` stores `5`.
-
-### Step 3
-
-```javascript
-const answer = firstNumber + secondNumber;
-```
-
-JavaScript adds the two numbers and stores `15`.
-
-### Step 4
-
-```javascript
-console.log(answer);
-```
-
-The console displays:
-
-```text
-15
+string
 ```
 
 ---
 
-## Order Matters
+# Creating Strings
 
-Statements must appear in a logical order.
+JavaScript strings can be created using:
 
-Correct:
-
-```javascript
-const courseName = "JavaScript";
-
-console.log(courseName);
-```
-
-Incorrect order:
-
-```javascript
-console.log(courseName);
-
-const courseName = "JavaScript";
-```
-
-The variable is used before it is created.
-
-This can produce an error.
-
-For beginner projects, create variables before using them.
+1. Double quotes
+2. Single quotes
+3. Backticks
 
 ---
 
-# Semicolons
+## Double Quotes
 
-A semicolon can mark the end of a JavaScript statement.
-
-Example:
+A string can use double quotation marks.
 
 ```javascript
 const language = "JavaScript";
 ```
 
-The semicolon is:
+Another example:
 
 ```javascript
-;
-```
-
-JavaScript can sometimes insert semicolons automatically.
-
-This may also work:
-
-```javascript
-const language = "JavaScript"
-```
-
-However, this course uses semicolons to make statement endings clear and consistent.
-
-Recommended:
-
-```javascript
-const studentName = "Mahroos";
-const lessonNumber = 9;
-console.log(studentName);
+const message = "Welcome to the course";
 ```
 
 ---
 
-## One Statement Per Line
+## Single Quotes
 
-Writing one statement per line makes code easier to read.
+A string can use single quotation marks.
 
-Recommended:
+```javascript
+const jobTitle = 'Software Engineer';
+```
+
+Another example:
+
+```javascript
+const country = 'Sri Lanka';
+```
+
+Both single and double quotes create strings.
+
+---
+
+## Backticks
+
+A string can also use backticks.
+
+```javascript
+const projectName = `Coding Practice`;
+```
+
+Backticks are commonly used for template literals.
+
+Backtick:
+
+```text
+`
+```
+
+Single quote:
+
+```text
+'
+```
+
+They look similar, but they are different characters.
+
+---
+
+# Matching Quotation Marks
+
+The opening and closing quotation marks must match.
+
+Correct:
+
+```javascript
+const message = "Hello";
+```
+
+Correct:
+
+```javascript
+const message = 'Hello';
+```
+
+Correct:
+
+```javascript
+const message = `Hello`;
+```
+
+Incorrect:
+
+```javascript
+const message = "Hello';
+```
+
+Incorrect:
+
+```javascript
+const message = 'Hello";
+```
+
+Mismatched quotation marks produce a syntax error.
+
+---
+
+# Quotation Marks Inside Strings
+
+Different outer quotation marks can make inner quotation marks easier to use.
+
+Example:
+
+```javascript
+const message =
+    'Mahroos said, "Hello."';
+```
+
+Output:
+
+```text
+Mahroos said, "Hello."
+```
+
+Another example:
+
+```javascript
+const message =
+    "It's a JavaScript lesson.";
+```
+
+Output:
+
+```text
+It's a JavaScript lesson.
+```
+
+---
+
+# String Concatenation
+
+Concatenation means joining strings together.
+
+The plus operator joins strings.
 
 ```javascript
 const firstName = "Mahroos";
 const lastName = "Mahthie";
-const fullName = firstName + " " + lastName;
+
+const fullName =
+    firstName + lastName;
 ```
 
-Avoid writing everything on one line:
+Output:
+
+```text
+MahroosMahthie
+```
+
+There is no space between the names.
+
+Add a space string:
 
 ```javascript
-const firstName = "Mahroos"; const lastName = "Mahthie"; const fullName = firstName + " " + lastName;
+const fullName =
+    firstName + " " + lastName;
 ```
 
-Both versions may work, but the first version is easier to read and maintain.
+Output:
+
+```text
+Mahroos Mahthie
+```
 
 ---
 
-# Whitespace in JavaScript
+## Joining a Sentence
 
-Whitespace includes:
+```javascript
+const studentName = "Mahroos";
+const language = "JavaScript";
 
+const message =
+    studentName + " is learning " + language + ".";
+
+console.log(message);
+```
+
+Output:
+
+```text
+Mahroos is learning JavaScript.
+```
+
+The plus operator joins the variables and strings.
+
+---
+
+# Template Literals
+
+Template literals use backticks.
+
+```javascript
+const message = `Hello`;
+```
+
+Template literals allow variables to be inserted directly into strings.
+
+Use:
+
+```javascript
+${variableName}
+```
+
+Example:
+
+```javascript
+const studentName = "Mahroos";
+const language = "JavaScript";
+
+const message =
+    `${studentName} is learning ${language}.`;
+
+console.log(message);
+```
+
+Output:
+
+```text
+Mahroos is learning JavaScript.
+```
+
+---
+
+## Concatenation Compared with Template Literals
+
+Concatenation:
+
+```javascript
+const message =
+    studentName + " is learning " + language + ".";
+```
+
+Template literal:
+
+```javascript
+const message =
+    `${studentName} is learning ${language}.`;
+```
+
+Both produce the same result.
+
+Template literals are often easier to read when several variables are used.
+
+---
+
+## Expressions Inside Template Literals
+
+JavaScript expressions can be used inside `${}`.
+
+```javascript
+const message =
+    `Ten plus five equals ${10 + 5}.`;
+
+console.log(message);
+```
+
+Output:
+
+```text
+Ten plus five equals 15.
+```
+
+JavaScript calculates the expression before inserting the result.
+
+---
+
+# String Length
+
+The `length` property counts the characters inside a string.
+
+```javascript
+const language = "JavaScript";
+
+console.log(language.length);
+```
+
+Output:
+
+```text
+10
+```
+
+The word `JavaScript` contains ten characters.
+
+---
+
+## Spaces Are Counted
+
+```javascript
+const fullName = "Mahroos Mahthie";
+
+console.log(fullName.length);
+```
+
+The space between the names is included in the character count.
+
+JavaScript counts:
+
+- Letters
+- Numbers
 - Spaces
-- Empty lines
-- Indentation
-- Line breaks
+- Punctuation
+- Symbols
 
-JavaScript usually ignores extra whitespace between parts of a statement.
+---
 
-These examples work similarly:
+## Length Is a Property
+
+Use:
 
 ```javascript
-const total = 10 + 5;
+text.length
 ```
 
+Do not add parentheses.
+
+Correct:
+
 ```javascript
-const total=10+5;
+courseName.length
 ```
 
-The first version is easier to read.
-
-Use spaces around operators:
+Incorrect:
 
 ```javascript
-const total = 10 + 5;
+courseName.length()
 ```
 
-Avoid:
+String methods will be introduced in the next lesson, but `length` is a property.
 
-```javascript
-const total=10+5;
+---
+
+# String Character Indexes
+
+Each character inside a string has an index number.
+
+JavaScript begins counting at zero.
+
+For:
+
+```text
+JavaScript
+```
+
+The indexes are:
+
+```text
+J = 0
+a = 1
+v = 2
+a = 3
+S = 4
+c = 5
+r = 6
+i = 7
+p = 8
+t = 9
 ```
 
 ---
 
-## Empty Lines
+## Access the First Character
 
-Empty lines can separate related parts of a program.
+```javascript
+const language = "JavaScript";
+
+console.log(language[0]);
+```
+
+Output:
+
+```text
+J
+```
+
+---
+
+## Access the Second Character
+
+```javascript
+console.log(language[1]);
+```
+
+Output:
+
+```text
+a
+```
+
+Remember:
+
+```text
+Index 0 = First character
+Index 1 = Second character
+Index 2 = Third character
+```
+
+---
+
+## Access the Last Character
+
+The final index is one less than the string length.
+
+```javascript
+const language = "JavaScript";
+
+const lastCharacter =
+    language[language.length - 1];
+
+console.log(lastCharacter);
+```
+
+Output:
+
+```text
+t
+```
+
+The length is `10`, but the last index is `9`.
+
+---
+
+## Invalid Index
+
+JavaScript returns `undefined` when an index does not exist.
+
+```javascript
+const language = "JavaScript";
+
+console.log(language[20]);
+```
+
+Output:
+
+```text
+undefined
+```
+
+---
+
+# Escape Characters
+
+Escape characters allow special characters to be written inside strings.
+
+An escape character begins with a backslash:
+
+```javascript
+\
+```
+
+---
+
+## Double Quotation Mark
+
+Use:
+
+```javascript
+\"
+```
 
 Example:
 
 ```javascript
-const firstName = "Mahroos";
-const lastName = "Mahthie";
-
-const fullName = firstName + " " + lastName;
-
-console.log(fullName);
+const message =
+    "Mahroos said, \"Hello.\"";
 ```
 
-The empty lines make the code easier to understand.
+Output:
+
+```text
+Mahroos said, "Hello."
+```
 
 ---
 
-# Multiple Statements
+## Single Quotation Mark
 
-A JavaScript program usually contains many statements.
+Use:
+
+```javascript
+\'
+```
 
 Example:
 
 ```javascript
-const studentName = "Mahroos";
-const lessonNumber = 9;
-const isLearning = true;
-const lessonTitle = "Expressions and Statements";
-
-const learningMessage =
-    studentName + " is learning Lesson " + lessonNumber + ".";
-
-console.log(studentName);
-console.log(lessonNumber);
-console.log(isLearning);
-console.log(lessonTitle);
-console.log(learningMessage);
+const message =
+    'It\'s a JavaScript lesson.';
 ```
 
-Each complete instruction is a statement.
+Output:
 
-Some statements contain expressions.
+```text
+It's a JavaScript lesson.
+```
 
 ---
 
-# Breaking a Long Statement
+## New Line
 
-A long statement can be divided across multiple lines.
+Use:
+
+```javascript
+\n
+```
 
 Example:
 
 ```javascript
-const learningMessage =
-    studentName + " is learning Lesson " + lessonNumber + ".";
+const message =
+    "First line\nSecond line";
+
+console.log(message);
 ```
 
-This is still one statement.
+Output:
 
-It ends at the semicolon.
-
-Breaking long code across lines can improve readability.
+```text
+First line
+Second line
+```
 
 ---
 
-# Statement Blocks
+## Backslash
 
-A block groups statements inside curly braces.
-
-Example:
+Use two backslashes to display one backslash.
 
 ```javascript
-{
-    const message = "Inside the block";
+const folder =
+    "JavaScript\\Lesson-09";
 
-    console.log(message);
-}
+console.log(folder);
 ```
 
-The block begins with:
+Output:
 
-```javascript
-{
+```text
+JavaScript\Lesson-09
 ```
-
-The block ends with:
-
-```javascript
-}
-```
-
-Blocks will become more important when learning:
-
-- Conditions
-- Loops
-- Functions
-
-For now, remember that a block groups related statements.
 
 ---
 
-# Expressions Versus Statements
+## Escape Character Summary
 
-## Expression
+| Escape Character | Meaning |
+|---|---|
+| `\"` | Double quotation mark |
+| `\'` | Single quotation mark |
+| `\n` | New line |
+| `\\` | Backslash |
+
+---
+
+# Strings and Numbers
+
+The plus operator behaves differently with strings and numbers.
+
+Number addition:
 
 ```javascript
-10 + 5
+console.log(10 + 5);
 ```
 
-This produces a value:
+Output:
 
 ```text
 15
 ```
 
-## Statement
-
-```javascript
-const total = 10 + 5;
-```
-
-This performs a complete instruction.
-
-It creates a variable and stores the value.
+Both values are numbers.
 
 ---
 
-## Another Comparison
-
-Expression:
+## String Concatenation with Numbers
 
 ```javascript
-firstName + " " + lastName
+console.log("10" + 5);
 ```
 
-Statement:
+Output:
+
+```text
+105
+```
+
+Because one value is a string, JavaScript joins the values as text.
+
+Check the type:
 
 ```javascript
-const fullName = firstName + " " + lastName;
+console.log(typeof ("10" + 5));
 ```
 
-The expression creates a full-name value.
+Output:
 
-The statement stores that value inside a variable.
+```text
+string
+```
+
+---
+
+## Calculation Order
+
+```javascript
+console.log(10 + 5 + " points");
+```
+
+Output:
+
+```text
+15 points
+```
+
+JavaScript adds the numbers first.
+
+Another example:
+
+```javascript
+console.log("Points: " + 10 + 5);
+```
+
+Output:
+
+```text
+Points: 105
+```
+
+JavaScript starts joining from left to right.
+
+Use parentheses to calculate first:
+
+```javascript
+console.log("Points: " + (10 + 5));
+```
+
+Output:
+
+```text
+Points: 15
+```
+
+---
+
+# Comparing Strings
+
+Strings can be compared using strict equality.
+
+```javascript
+const firstLanguage = "JavaScript";
+const secondLanguage = "JavaScript";
+
+console.log(
+    firstLanguage === secondLanguage
+);
+```
+
+Output:
+
+```text
+true
+```
+
+The two strings contain the same characters.
+
+---
+
+## Strings Are Case-Sensitive
+
+```javascript
+console.log(
+    "JavaScript" === "javascript"
+);
+```
+
+Output:
+
+```text
+false
+```
+
+The uppercase `J` and lowercase `j` are different.
+
+JavaScript string comparisons are case-sensitive.
+
+---
+
+## Spaces Affect Comparisons
+
+```javascript
+console.log(
+    "JavaScript" === "JavaScript "
+);
+```
+
+Output:
+
+```text
+false
+```
+
+The second string contains an extra space.
+
+---
+
+# Empty Strings
+
+An empty string contains quotation marks without any characters.
+
+```javascript
+const emptyMessage = "";
+```
+
+It is still a string.
+
+```javascript
+console.log(typeof emptyMessage);
+```
+
+Output:
+
+```text
+string
+```
+
+Its length is zero.
+
+```javascript
+console.log(emptyMessage.length);
+```
+
+Output:
+
+```text
+0
+```
+
+---
+
+## Empty String Compared with a Space
+
+Empty string:
+
+```javascript
+""
+```
+
+Length:
+
+```text
+0
+```
+
+String containing one space:
+
+```javascript
+" "
+```
+
+Length:
+
+```text
+1
+```
+
+A space is a character.
+
+---
+
+# Strings Cannot Be Changed by Character Index
+
+Individual characters inside strings cannot be directly replaced.
+
+```javascript
+let language = "JavaScript";
+
+language[0] = "Y";
+
+console.log(language);
+```
+
+The result remains:
+
+```text
+JavaScript
+```
+
+To change the text, assign a new string.
+
+```javascript
+language = "TypeScript";
+```
 
 ---
 
 # JavaScript Used in This Lesson
 
-## Arithmetic Expression
-
-```javascript
-const arithmeticExpression = 20 + 10;
-```
-
-## String Expression
-
-```javascript
-const stringExpression = "Java" + "Script";
-```
-
-## Comparison Expression
-
-```javascript
-const comparisonExpression = 20 > 18;
-```
-
-## Logical Expression
-
-```javascript
-const logicalExpression = true && false;
-```
-
-## Declaration Statement
+## Basic String
 
 ```javascript
 const courseName = "JavaScript";
 ```
 
-## Assignment Statement
+## Double Quotes
 
 ```javascript
-let lessonNumber = 8;
-
-lessonNumber = 9;
+const language = "JavaScript";
 ```
 
-## Console Statement
+## Single Quotes
 
 ```javascript
-console.log(courseName);
+const role = 'Software Engineer';
+```
+
+## Backticks
+
+```javascript
+const project = `Coding Practice`;
+```
+
+## Concatenation
+
+```javascript
+const fullName =
+    firstName + " " + lastName;
+```
+
+## Template Literal
+
+```javascript
+const message =
+    `${studentName} is learning ${language}.`;
+```
+
+## String Length
+
+```javascript
+const characterCount =
+    courseName.length;
+```
+
+## Character Index
+
+```javascript
+const firstCharacter =
+    courseName[0];
+```
+
+## Last Character
+
+```javascript
+const lastCharacter =
+    courseName[courseName.length - 1];
+```
+
+## Empty String
+
+```javascript
+const emptyMessage = "";
 ```
 
 ---
@@ -844,193 +950,68 @@ console.log(courseName);
 
 When the webpage opens:
 
-- A dark-blue header is displayed.
-- White lesson sections appear on a light-gray background.
-- Expression results appear inside dark output boxes.
-- Cards display arithmetic, string, comparison, and logical expressions.
-- Statement examples explain declarations, assignments, and console output.
-- An example separates an expression from its complete statement.
-- JavaScript execution order is shown step by step.
-- Semicolon examples compare recommended and possible styles.
-- A table summarizes expressions and statements.
-- The layout adjusts for smaller screens.
-
-The expression cards display:
-
-```text
-Result: 30
-Result: JavaScript
-Result: true
-Result: false
-```
+- A dark-blue header appears.
+- White sections appear on a light-gray background.
+- A basic string and its data type are displayed.
+- Double quotes, single quotes, and backticks are compared.
+- Two names are joined using concatenation.
+- Variables are inserted using template literals.
+- String lengths are displayed.
+- JavaScript character indexes are shown.
+- Escape-character examples appear.
+- Number addition and string joining are compared.
+- String comparisons display boolean results.
+- An empty string displays a length of zero.
+- The page adjusts for smaller screens.
 
 ---
 
 # Practice Examples
 
-## Practice 1: Create a Number Expression
+## Practice 1: Create Three Strings
 
-Add:
+Create one string using each quotation style.
 
 ```javascript
-const practiceResult = 25 + 15;
+const firstString = "JavaScript";
+const secondString = 'Web Development';
+const thirdString = `Coding Practice`;
 
-console.log(practiceResult);
+console.log(firstString);
+console.log(secondString);
+console.log(thirdString);
+```
+
+---
+
+## Practice 2: Join a Full Name
+
+```javascript
+const firstName = "Mahroos";
+const lastName = "Mahthie";
+
+const fullName =
+    firstName + " " + lastName;
+
+console.log(fullName);
 ```
 
 Expected output:
 
 ```text
-40
-```
-
-The expression is:
-
-```javascript
-25 + 15
+Mahroos Mahthie
 ```
 
 ---
 
-## Practice 2: Create a String Expression
-
-Add:
+## Practice 3: Create a Template Literal
 
 ```javascript
-const greeting = "Hello, " + "JavaScript";
-
-console.log(greeting);
-```
-
-Expected output:
-
-```text
-Hello, JavaScript
-```
-
----
-
-## Practice 3: Create a Comparison Expression
-
-Add:
-
-```javascript
-const ageCheck = 20 >= 18;
-
-console.log(ageCheck);
-```
-
-Expected output:
-
-```text
-true
-```
-
----
-
-## Practice 4: Create a Declaration Statement
-
-Add:
-
-```javascript
-const projectName = "Coding Practice";
-
-console.log(projectName);
-```
-
-The first line creates the variable.
-
-The second line displays its value.
-
----
-
-## Practice 5: Create an Assignment Statement
-
-Add:
-
-```javascript
-let completedLessons = 8;
-
-completedLessons = 9;
-
-console.log(completedLessons);
-```
-
-Expected output:
-
-```text
-9
-```
-
----
-
-## Practice 6: Use an Expression Inside a Statement
-
-Add:
-
-```javascript
-const price = 20;
-const quantity = 3;
-
-const totalPrice = price * quantity;
-
-console.log(totalPrice);
-```
-
-Expected output:
-
-```text
-60
-```
-
-The expression is:
-
-```javascript
-price * quantity
-```
-
-The complete statement is:
-
-```javascript
-const totalPrice = price * quantity;
-```
-
----
-
-## Practice 7: Test Execution Order
-
-Add:
-
-```javascript
-const firstValue = 5;
-const secondValue = 10;
-const combinedValue = firstValue + secondValue;
-
-console.log(combinedValue);
-```
-
-Expected output:
-
-```text
-15
-```
-
-Move the `console.log()` statement above the variable declarations and observe the error.
-
-Change the order back after testing.
-
----
-
-## Practice 8: Join a Long Message
-
-Add:
-
-```javascript
-const student = "Mahroos";
-const subject = "JavaScript";
+const studentName = "Mahroos";
+const lessonNumber = 9;
 
 const message =
-    student + " is currently learning " + subject + ".";
+    `${studentName} is studying Lesson ${lessonNumber}.`;
 
 console.log(message);
 ```
@@ -1038,129 +1019,135 @@ console.log(message);
 Expected output:
 
 ```text
-Mahroos is currently learning JavaScript.
+Mahroos is studying Lesson 9.
+```
+
+---
+
+## Practice 4: Check String Length
+
+```javascript
+const projectName = "Coding Practice";
+
+console.log(projectName.length);
+```
+
+Remember that the space is also counted.
+
+---
+
+## Practice 5: Access Characters
+
+```javascript
+const language = "JavaScript";
+
+console.log(language[0]);
+console.log(language[4]);
+console.log(language[9]);
+```
+
+Expected output:
+
+```text
+J
+S
+t
+```
+
+---
+
+## Practice 6: Access the Last Character
+
+```javascript
+const projectName = "Portfolio";
+
+const lastCharacter =
+    projectName[projectName.length - 1];
+
+console.log(lastCharacter);
+```
+
+Expected output:
+
+```text
+o
+```
+
+---
+
+## Practice 7: Test an Invalid Index
+
+```javascript
+const language = "JavaScript";
+
+console.log(language[50]);
+```
+
+Expected output:
+
+```text
+undefined
+```
+
+---
+
+## Practice 8: Use Escape Characters
+
+```javascript
+const message =
+    "Mahroos said, \"JavaScript is interesting.\"";
+
+console.log(message);
+```
+
+Expected output:
+
+```text
+Mahroos said, "JavaScript is interesting."
+```
+
+---
+
+## Practice 9: Compare Strings
+
+```javascript
+console.log(
+    "JavaScript" === "JavaScript"
+);
+
+console.log(
+    "JavaScript" === "javascript"
+);
+```
+
+Expected output:
+
+```text
+true
+false
+```
+
+---
+
+## Practice 10: Compare Number Addition and String Joining
+
+```javascript
+console.log(20 + 5);
+console.log("20" + 5);
+```
+
+Expected output:
+
+```text
+25
+205
 ```
 
 ---
 
 # Common Beginner Mistakes
 
-## Thinking Every Line Is an Expression
-
-This is an expression:
-
-```javascript
-10 + 5
-```
-
-This is a statement:
-
-```javascript
-const result = 10 + 5;
-```
-
-The statement contains an expression.
-
----
-
-## Forgetting to Store an Expression Result
-
-This expression produces a result:
-
-```javascript
-10 + 5;
-```
-
-However, the result is not stored.
-
-Store it inside a variable:
-
-```javascript
-const result = 10 + 5;
-```
-
----
-
-## Using a Variable Before Declaring It
-
-Incorrect:
-
-```javascript
-console.log(studentName);
-
-const studentName = "Mahroos";
-```
-
-Correct:
-
-```javascript
-const studentName = "Mahroos";
-
-console.log(studentName);
-```
-
----
-
-## Forgetting the Assignment Operator
-
-Incorrect:
-
-```javascript
-const total 10 + 5;
-```
-
-Correct:
-
-```javascript
-const total = 10 + 5;
-```
-
-The assignment operator stores the expression result inside the variable.
-
----
-
-## Using `const` When the Value Must Change
-
-Incorrect:
-
-```javascript
-const score = 10;
-
-score = 20;
-```
-
-Correct:
-
-```javascript
-let score = 10;
-
-score = 20;
-```
-
-Use `let` when a value must be reassigned.
-
----
-
-## Writing Several Statements Without Clear Spacing
-
-Difficult to read:
-
-```javascript
-const firstName="Mahroos";const lastName="Mahthie";console.log(firstName+lastName);
-```
-
-Better:
-
-```javascript
-const firstName = "Mahroos";
-const lastName = "Mahthie";
-
-console.log(firstName + " " + lastName);
-```
-
----
-
-## Forgetting Quotation Marks Around Strings
+## Forgetting Quotation Marks
 
 Incorrect:
 
@@ -1176,70 +1163,208 @@ const language = "JavaScript";
 
 ---
 
-## Forgetting to Connect `script.js`
+## Mixing Quotation Marks
 
-Make sure the HTML contains:
-
-```html
-<script src="script.js"></script>
-```
-
-Place it before the closing `</body>` tag.
-
----
-
-# Important Notes
-
-- An expression produces a value.
-- A statement performs a complete instruction.
-- Statements can contain expressions.
-- Arithmetic expressions produce numbers.
-- String expressions produce text.
-- Comparison expressions usually produce booleans.
-- Variable declarations are statements.
-- Assignments are statements.
-- `console.log()` can be used as a statement.
-- JavaScript normally runs statements from top to bottom.
-- Code order matters.
-- A semicolon can mark the end of a statement.
-- This course uses semicolons consistently.
-- Write one statement per line when possible.
-- Spaces and empty lines improve readability.
-- A block groups statements inside curly braces.
-- Create variables before using them.
-
----
-
-# Easy Way to Remember
-
-```text
-Expression = Produces a value
-Statement  = Performs an instruction
-```
-
-Example:
+Incorrect:
 
 ```javascript
-10 + 5
+const message = "Hello';
 ```
 
-Produces:
+Correct:
+
+```javascript
+const message = "Hello";
+```
+
+---
+
+## Forgetting the Space During Concatenation
+
+```javascript
+const fullName =
+    firstName + lastName;
+```
+
+Output:
+
+```text
+MahroosMahthie
+```
+
+Correct:
+
+```javascript
+const fullName =
+    firstName + " " + lastName;
+```
+
+---
+
+## Using Normal Quotes for Interpolation
+
+Incorrect:
+
+```javascript
+const message =
+    "${studentName} is learning JavaScript.";
+```
+
+This displays the symbols as normal text.
+
+Correct:
+
+```javascript
+const message =
+    `${studentName} is learning JavaScript.`;
+```
+
+Variable interpolation requires backticks.
+
+---
+
+## Starting Index Counting at One
+
+Incorrect assumption:
+
+```text
+First character = Index 1
+```
+
+Correct:
+
+```text
+First character = Index 0
+```
+
+---
+
+## Calling Length Like a Method
+
+Incorrect:
+
+```javascript
+courseName.length()
+```
+
+Correct:
+
+```javascript
+courseName.length
+```
+
+`length` is a property.
+
+---
+
+## Expecting Number Addition from a String
+
+```javascript
+console.log("10" + 5);
+```
+
+The output is:
+
+```text
+105
+```
+
+It is not:
 
 ```text
 15
 ```
 
-Complete statement:
+The quoted value is a string.
+
+---
+
+## Ignoring Uppercase and Lowercase Differences
 
 ```javascript
-const total = 10 + 5;
+"JavaScript" === "javascript"
+```
+
+Result:
+
+```text
+false
+```
+
+String comparisons are case-sensitive.
+
+---
+
+# Important Notes
+
+- Strings store text.
+- Strings can use double quotes.
+- Strings can use single quotes.
+- Strings can use backticks.
+- Opening and closing quotation marks must match.
+- The plus operator joins strings.
+- Joining strings is called concatenation.
+- Template literals use backticks.
+- `${}` inserts values into template literals.
+- The `length` property counts characters.
+- String index counting begins at zero.
+- Spaces and symbols are counted as characters.
+- An invalid index returns `undefined`.
+- Escape characters begin with a backslash.
+- Strings and numbers behave differently with the plus operator.
+- String comparisons are case-sensitive.
+- An empty string has a length of zero.
+- Individual string characters cannot be directly replaced.
+- String methods are covered in the next lesson.
+
+---
+
+# Easy Way to Remember
+
+Create strings:
+
+```javascript
+"Double quotes"
+'Single quotes'
+`Backticks`
+```
+
+Join strings:
+
+```javascript
+firstName + " " + lastName
+```
+
+Insert variables:
+
+```javascript
+`${firstName} ${lastName}`
+```
+
+Count characters:
+
+```javascript
+text.length
+```
+
+Read the first character:
+
+```javascript
+text[0]
+```
+
+Read the last character:
+
+```javascript
+text[text.length - 1]
 ```
 
 Remember:
 
 ```text
-Expression goes inside the statement.
-Statement performs the full action.
+String = Text
+Index starts at 0
+length counts characters
 ```
 
 ---
@@ -1248,22 +1373,25 @@ Statement performs the full action.
 
 In this lesson, I learned:
 
-- What a JavaScript expression is.
-- What a JavaScript statement is.
-- The difference between expressions and statements.
-- How arithmetic expressions produce numbers.
-- How string expressions produce text.
-- How comparison expressions produce boolean values.
-- How logical expressions work.
-- How expressions are used inside statements.
-- What a variable declaration statement is.
-- What an assignment statement is.
-- How method calls can be used as statements.
-- How JavaScript executes statements from top to bottom.
-- Why statement order matters.
-- How semicolons mark statement endings.
-- Why one statement per line is easier to read.
-- How whitespace improves code readability.
-- How blocks group related statements.
+- What a JavaScript string is.
+- How to create strings using double quotes.
+- How to create strings using single quotes.
+- How to create strings using backticks.
+- Why quotation marks must match.
+- How to include quotation marks inside strings.
+- How string concatenation works.
+- How to add spaces when joining strings.
+- How template literals work.
+- How to insert variables using `${}`.
+- How expressions work inside template literals.
+- How the `length` property counts characters.
+- How JavaScript character indexes work.
+- How to access the first and last characters.
+- What happens when an index does not exist.
+- How escape characters work.
+- How strings and numbers behave with the plus operator.
+- How to compare strings.
+- Why string comparisons are case-sensitive.
+- What an empty string is.
 
-The next lesson is **10 - JavaScript Comments**.
+The next lesson is **10 - JavaScript String Methods**.

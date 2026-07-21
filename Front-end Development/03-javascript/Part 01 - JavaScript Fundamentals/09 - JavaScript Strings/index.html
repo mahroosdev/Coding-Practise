@@ -6,7 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>JavaScript Expressions and Statements</title>
+    <title>JavaScript Strings</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,11 +15,10 @@
 
     <header>
         <div class="container">
-            <h1>JavaScript Expressions and Statements</h1>
+            <h1>JavaScript Strings</h1>
 
             <p>
-                Learning how JavaScript creates values and performs
-                complete instructions.
+                Learning how JavaScript stores, joins, and reads text values.
             </p>
         </div>
     </header>
@@ -27,80 +26,57 @@
     <main class="container">
 
         <section>
-            <h2>What Is an Expression?</h2>
+            <h2>What Is a String?</h2>
 
             <p>
-                An expression is code that produces a value.
+                A string is a JavaScript value used to store text.
             </p>
 
-            <div class="example-box">
-                <code>10 + 5</code>
+            <div class="code-box">
+                <code>const courseName = "JavaScript";</code>
             </div>
 
-            <p>
-                This expression produces the value <code>15</code>.
-            </p>
-
-            <div class="output-box" id="expression-output">
+            <div class="output-box" id="basic-string-output">
                 JavaScript output will appear here.
             </div>
         </section>
 
         <section>
-            <h2>What Is a Statement?</h2>
+            <h2>1. Creating Strings</h2>
 
             <p>
-                A statement is a complete instruction that tells JavaScript
-                to perform an action.
+                JavaScript strings can use double quotes, single quotes,
+                or backticks.
             </p>
-
-            <div class="example-box">
-                <code>const total = 10 + 5;</code>
-            </div>
-
-            <p>
-                This statement creates a variable and stores the result of
-                an expression.
-            </p>
-
-            <div class="output-box" id="statement-output">
-                JavaScript output will appear here.
-            </div>
-        </section>
-
-        <section>
-            <h2>Expression Examples</h2>
 
             <div class="card-container">
 
                 <div class="lesson-card">
-                    <h3>Arithmetic Expression</h3>
-                    <code>20 + 10</code>
-                    <p id="arithmetic-expression">
+                    <h3>Double Quotes</h3>
+
+                    <code>"JavaScript"</code>
+
+                    <p id="double-quote-output">
                         Waiting for JavaScript...
                     </p>
                 </div>
 
                 <div class="lesson-card">
-                    <h3>String Expression</h3>
-                    <code>"Java" + "Script"</code>
-                    <p id="string-expression">
+                    <h3>Single Quotes</h3>
+
+                    <code>'Software Engineer'</code>
+
+                    <p id="single-quote-output">
                         Waiting for JavaScript...
                     </p>
                 </div>
 
                 <div class="lesson-card">
-                    <h3>Comparison Expression</h3>
-                    <code>20 &gt; 18</code>
-                    <p id="comparison-expression">
-                        Waiting for JavaScript...
-                    </p>
-                </div>
+                    <h3>Backticks</h3>
 
-                <div class="lesson-card">
-                    <h3>Logical Expression</h3>
-                    <code>true &amp;&amp; false</code>
-                    <p id="logical-expression">
+                    <code>`Coding Practice`</code>
+
+                    <p id="backtick-output">
                         Waiting for JavaScript...
                     </p>
                 </div>
@@ -109,125 +85,169 @@
         </section>
 
         <section>
-            <h2>Statement Examples</h2>
-
-            <div class="statement-container">
-
-                <div class="statement-card">
-                    <h3>Variable Declaration</h3>
-
-                    <code>const courseName = "JavaScript";</code>
-
-                    <p>
-                        Creates a variable and assigns a value.
-                    </p>
-                </div>
-
-                <div class="statement-card">
-                    <h3>Assignment Statement</h3>
-
-                    <code>lessonNumber = 9;</code>
-
-                    <p>
-                        Assigns a new value to an existing variable.
-                    </p>
-                </div>
-
-                <div class="statement-card">
-                    <h3>Console Statement</h3>
-
-                    <code>console.log(courseName);</code>
-
-                    <p>
-                        Displays a value in the browser console.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="output-box" id="statement-example-output">
-                JavaScript output will appear here.
-            </div>
-        </section>
-
-        <section>
-            <h2>Expressions Inside Statements</h2>
+            <h2>2. Joining Strings</h2>
 
             <p>
-                Expressions are often placed inside statements.
+                The plus operator can join two or more strings.
             </p>
 
-            <div class="example-box">
-                <code>const finalScore = 50 + 25;</code>
+            <div class="code-box">
+                <code>const fullName = firstName + " " + lastName;</code>
             </div>
 
-            <div class="explanation-grid">
-
-                <div class="explanation-card">
-                    <h3>Expression</h3>
-                    <code>50 + 25</code>
-                    <p>Produces the value 75.</p>
-                </div>
-
-                <div class="explanation-card">
-                    <h3>Statement</h3>
-                    <code>const finalScore = 50 + 25;</code>
-                    <p>Stores the value inside a variable.</p>
-                </div>
-
-            </div>
-
-            <div class="output-box" id="inside-statement-output">
+            <div class="output-box" id="concatenation-output">
                 JavaScript output will appear here.
             </div>
         </section>
 
         <section>
-            <h2>JavaScript Execution Order</h2>
+            <h2>3. Template Literals</h2>
 
             <p>
-                JavaScript normally reads and runs statements from top to
-                bottom.
+                Template literals use backticks and allow variables to be
+                inserted directly into a string.
+            </p>
+
+            <div class="code-box">
+                <code>`${studentName} is learning ${language}.`</code>
+            </div>
+
+            <div class="output-box" id="template-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>4. String Length</h2>
+
+            <p>
+                The <code>length</code> property counts the characters inside
+                a string.
+            </p>
+
+            <div class="code-box">
+                <code>courseName.length</code>
+            </div>
+
+            <div class="output-box" id="length-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. String Character Indexes</h2>
+
+            <p>
+                Every character inside a string has an index number.
+                JavaScript starts counting from zero.
+            </p>
+
+            <div class="character-container">
+
+                <div class="character-card">
+                    <span>J</span>
+                    <small>0</small>
+                </div>
+
+                <div class="character-card">
+                    <span>a</span>
+                    <small>1</small>
+                </div>
+
+                <div class="character-card">
+                    <span>v</span>
+                    <small>2</small>
+                </div>
+
+                <div class="character-card">
+                    <span>a</span>
+                    <small>3</small>
+                </div>
+
+                <div class="character-card">
+                    <span>S</span>
+                    <small>4</small>
+                </div>
+
+                <div class="character-card">
+                    <span>c</span>
+                    <small>5</small>
+                </div>
+
+                <div class="character-card">
+                    <span>r</span>
+                    <small>6</small>
+                </div>
+
+                <div class="character-card">
+                    <span>i</span>
+                    <small>7</small>
+                </div>
+
+                <div class="character-card">
+                    <span>p</span>
+                    <small>8</small>
+                </div>
+
+                <div class="character-card">
+                    <span>t</span>
+                    <small>9</small>
+                </div>
+
+            </div>
+
+            <div class="output-box" id="character-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>6. Escape Characters</h2>
+
+            <p>
+                Escape characters allow quotation marks, new lines,
+                and backslashes to appear inside strings.
             </p>
 
             <div class="code-list">
-                <code>const firstNumber = 10;</code>
-                <code>const secondNumber = 5;</code>
-                <code>const answer = firstNumber + secondNumber;</code>
-                <code>console.log(answer);</code>
+                <code>\" = Double quotation mark</code>
+                <code>\' = Single quotation mark</code>
+                <code>\n = New line</code>
+                <code>\\ = Backslash</code>
             </div>
 
-            <div class="output-box" id="order-output">
+            <div class="output-box" id="escape-output">
                 JavaScript output will appear here.
             </div>
         </section>
 
         <section>
-            <h2>Semicolons</h2>
+            <h2>7. Strings and Numbers</h2>
 
             <p>
-                A semicolon can mark the end of a JavaScript statement.
+                The plus operator adds numbers but joins values when a string
+                is involved.
             </p>
 
             <div class="comparison-container">
 
-                <div class="comparison-card recommended">
-                    <h3>Recommended</h3>
+                <div class="comparison-card">
+                    <h3>Number Addition</h3>
 
-                    <code>const language = "JavaScript";</code>
+                    <code>10 + 5</code>
 
-                    <p>
-                        The statement ends clearly with a semicolon.
+                    <p id="number-addition-output">
+                        Waiting for JavaScript...
                     </p>
                 </div>
 
                 <div class="comparison-card">
-                    <h3>Possible</h3>
+                    <h3>String Joining</h3>
 
-                    <code>const language = "JavaScript"</code>
+                    <code>"10" + 5</code>
 
-                    <p>
-                        JavaScript may add the semicolon automatically.
+                    <p id="string-number-output">
+                        Waiting for JavaScript...
                     </p>
                 </div>
 
@@ -235,19 +255,35 @@
         </section>
 
         <section>
-            <h2>Multiple Statements</h2>
+            <h2>8. Comparing Strings</h2>
 
             <p>
-                A JavaScript program usually contains many statements.
+                Strings can be compared using the strict equality operator.
             </p>
 
-            <div class="output-box" id="multiple-statements-output">
+            <div class="output-box" id="comparison-output">
                 JavaScript output will appear here.
             </div>
         </section>
 
         <section>
-            <h2>Expressions and Statements Summary</h2>
+            <h2>9. Empty Strings</h2>
+
+            <p>
+                An empty string contains quotation marks but no characters.
+            </p>
+
+            <div class="code-box">
+                <code>const emptyMessage = "";</code>
+            </div>
+
+            <div class="output-box" id="empty-string-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>String Fundamentals Summary</h2>
 
             <div class="table-container">
                 <table>
@@ -261,33 +297,51 @@
 
                     <tbody>
                         <tr>
-                            <td>Expression</td>
-                            <td><code>10 + 5</code></td>
-                            <td>Produces a value</td>
+                            <td>Double Quotes</td>
+                            <td><code>"JavaScript"</code></td>
+                            <td>Creates a string</td>
                         </tr>
 
                         <tr>
-                            <td>Declaration Statement</td>
-                            <td><code>const total = 15;</code></td>
-                            <td>Creates a variable</td>
+                            <td>Single Quotes</td>
+                            <td><code>'JavaScript'</code></td>
+                            <td>Creates a string</td>
                         </tr>
 
                         <tr>
-                            <td>Assignment Statement</td>
-                            <td><code>score = 20;</code></td>
-                            <td>Changes a variable value</td>
+                            <td>Backticks</td>
+                            <td><code>`JavaScript`</code></td>
+                            <td>Creates a template literal</td>
                         </tr>
 
                         <tr>
-                            <td>Method Call Statement</td>
-                            <td><code>console.log(total);</code></td>
-                            <td>Performs an action</td>
+                            <td>Concatenation</td>
+                            <td><code>firstName + lastName</code></td>
+                            <td>Joins strings</td>
                         </tr>
 
                         <tr>
-                            <td>Semicolon</td>
-                            <td><code>;</code></td>
-                            <td>Marks the end of a statement</td>
+                            <td>Interpolation</td>
+                            <td><code>${variable}</code></td>
+                            <td>Inserts a value into a template literal</td>
+                        </tr>
+
+                        <tr>
+                            <td>Length</td>
+                            <td><code>text.length</code></td>
+                            <td>Counts characters</td>
+                        </tr>
+
+                        <tr>
+                            <td>Character Index</td>
+                            <td><code>text[0]</code></td>
+                            <td>Reads one character</td>
+                        </tr>
+
+                        <tr>
+                            <td>Empty String</td>
+                            <td><code>""</code></td>
+                            <td>Stores text with zero characters</td>
                         </tr>
                     </tbody>
                 </table>
