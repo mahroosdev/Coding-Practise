@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Events</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>JavaScript Events</h1>
+
+            <p>
+                Learning how JavaScript responds to user actions.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>What Is an Event?</h2>
+
+            <p>
+                An event is an action that happens inside the browser.
+            </p>
+
+            <p>
+                Examples include clicking, typing, moving the mouse,
+                and submitting a form.
+            </p>
+
+            <div class="code-box">
+                <code>button.addEventListener("click", function () {
+    console.log("Button clicked");
+});</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>1. Click Event</h2>
+
+            <button type="button" id="click-button">
+                Click Me
+            </button>
+
+            <div class="output-box" id="click-output">
+                Click the button to see the result.
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Double-Click Event</h2>
+
+            <button type="button" id="double-click-button">
+                Double Click Me
+            </button>
+
+            <div class="output-box" id="double-click-output">
+                Double-click the button to see the result.
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Mouse Events</h2>
+
+            <div class="mouse-box" id="mouse-box">
+                Move the mouse into and out of this box.
+            </div>
+
+            <div class="output-box" id="mouse-output">
+                Waiting for a mouse event.
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Keyboard Event</h2>
+
+            <label for="keyboard-input">
+                Type inside this field:
+            </label>
+
+            <input
+                type="text"
+                id="keyboard-input"
+                placeholder="Press a keyboard key"
+            >
+
+            <div class="output-box" id="keyboard-output">
+                The pressed key will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. The Event Object</h2>
+
+            <button type="button" id="event-button">
+                Show Event Information
+            </button>
+
+            <div class="output-box" id="event-output">
+                Click the button to inspect the event.
+            </div>
+        </section>
+
+        <section>
+            <h2>6. Click Counter</h2>
+
+            <button type="button" id="counter-button">
+                Increase Counter
+            </button>
+
+            <div class="counter-display" id="counter-display">
+                0
+            </div>
+        </section>
+
+        <section>
+            <h2>Common Browser Events</h2>
+
+            <div class="event-grid">
+
+                <div class="event-card">
+                    <h3>click</h3>
+                    <p>A user clicks an element.</p>
+                </div>
+
+                <div class="event-card">
+                    <h3>dblclick</h3>
+                    <p>A user double-clicks an element.</p>
+                </div>
+
+                <div class="event-card">
+                    <h3>mouseenter</h3>
+                    <p>The pointer enters an element.</p>
+                </div>
+
+                <div class="event-card">
+                    <h3>mouseleave</h3>
+                    <p>The pointer leaves an element.</p>
+                </div>
+
+                <div class="event-card">
+                    <h3>keydown</h3>
+                    <p>A keyboard key is pressed.</p>
+                </div>
+
+                <div class="event-card">
+                    <h3>input</h3>
+                    <p>An input value changes.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Event Summary</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Part</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Element</td>
+                            <td>The selected HTML element</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>addEventListener()</code></td>
+                            <td>Registers an event listener</td>
+                        </tr>
+
+                        <tr>
+                            <td>Event name</td>
+                            <td>Defines the action to watch</td>
+                        </tr>
+
+                        <tr>
+                            <td>Function</td>
+                            <td>Runs when the event happens</td>
+                        </tr>
+
+                        <tr>
+                            <td>Event object</td>
+                            <td>Contains information about the event</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Learning Practice</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
