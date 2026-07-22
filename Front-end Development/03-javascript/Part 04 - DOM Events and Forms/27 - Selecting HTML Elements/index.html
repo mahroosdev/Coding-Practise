@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Selecting HTML Elements</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Selecting HTML Elements</h1>
+
+            <p>
+                Learning how JavaScript finds HTML elements inside the DOM.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>Why Select HTML Elements?</h2>
+
+            <p>
+                JavaScript must select an HTML element before it can read
+                or change that element.
+            </p>
+
+            <div class="code-box">
+                <code>document.getElementById("lesson-title");</code>
+            </div>
+
+            <div class="output-box" id="introduction-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>1. Selecting by ID</h2>
+
+            <p id="id-example">
+                This paragraph has the ID <code>id-example</code>.
+            </p>
+
+            <div class="code-box">
+                <code>document.getElementById("id-example");</code>
+            </div>
+
+            <div class="output-box" id="id-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Selecting with querySelector()</h2>
+
+            <p class="query-example">
+                This is the first element with the class
+                <code>query-example</code>.
+            </p>
+
+            <p class="query-example">
+                This is the second element with the same class.
+            </p>
+
+            <div class="code-box">
+                <code>document.querySelector(".query-example");</code>
+            </div>
+
+            <div class="output-box" id="query-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Selecting Several Elements</h2>
+
+            <ul class="technology-list">
+                <li class="technology-item">HTML</li>
+                <li class="technology-item">CSS</li>
+                <li class="technology-item">JavaScript</li>
+                <li class="technology-item">React</li>
+            </ul>
+
+            <div class="code-box">
+                <code>document.querySelectorAll(".technology-item");</code>
+            </div>
+
+            <div class="output-box" id="query-all-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Selecting by Class Name</h2>
+
+            <div class="course-card">HTML Course</div>
+            <div class="course-card">CSS Course</div>
+            <div class="course-card">JavaScript Course</div>
+
+            <div class="code-box">
+                <code>document.getElementsByClassName("course-card");</code>
+            </div>
+
+            <div class="output-box" id="class-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Selecting by Tag Name</h2>
+
+            <p>
+                The <code>getElementsByTagName()</code> method selects
+                elements using their HTML tag.
+            </p>
+
+            <div class="code-box">
+                <code>document.getElementsByTagName("section");</code>
+            </div>
+
+            <div class="output-box" id="tag-output">
+                JavaScript output will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>Selection Method Summary</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Method</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><code>getElementById()</code></td>
+                            <td>Selects one element by ID</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>querySelector()</code></td>
+                            <td>Selects the first matching CSS selector</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>querySelectorAll()</code></td>
+                            <td>Selects all matching CSS selectors</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>getElementsByClassName()</code></td>
+                            <td>Selects elements by class name</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>getElementsByTagName()</code></td>
+                            <td>Selects elements by tag name</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Learning Practice</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
