@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Form Validation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>JavaScript Form Validation</h1>
+
+            <p>
+                Learning how JavaScript checks form values before
+                accepting a submission.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>What Is Form Validation?</h2>
+
+            <p>
+                Form validation checks whether entered information follows
+                the required rules.
+            </p>
+
+            <div class="code-box">
+                <code>if (username.length &lt; 3) {
+    // Display an error
+}</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>Registration Form</h2>
+
+            <form id="validation-form" novalidate>
+
+                <div class="form-group">
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Minimum 3 characters"
+                    >
+
+                    <small
+                        class="error-message"
+                        id="username-error"
+                    ></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="example@email.com"
+                    >
+
+                    <small
+                        class="error-message"
+                        id="email-error"
+                    ></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Minimum 8 characters"
+                    >
+
+                    <small
+                        class="error-message"
+                        id="password-error"
+                    ></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        placeholder="Enter the password again"
+                    >
+
+                    <small
+                        class="error-message"
+                        id="confirm-password-error"
+                    ></small>
+                </div>
+
+                <div class="checkbox-group">
+                    <input
+                        type="checkbox"
+                        id="terms"
+                    >
+
+                    <label for="terms">
+                        I agree to the terms
+                    </label>
+                </div>
+
+                <small
+                    class="error-message"
+                    id="terms-error"
+                ></small>
+
+                <button type="submit">
+                    Create Account
+                </button>
+
+            </form>
+
+            <div class="result-box" id="form-result">
+                Complete and submit the form.
+            </div>
+        </section>
+
+        <section>
+            <h2>Validation Rules</h2>
+
+            <div class="rule-grid">
+
+                <div class="rule-card">
+                    <h3>Username</h3>
+
+                    <p>
+                        Must contain at least three characters.
+                    </p>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Email</h3>
+
+                    <p>
+                        Must contain an email-style value.
+                    </p>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Password</h3>
+
+                    <p>
+                        Must contain at least eight characters.
+                    </p>
+                </div>
+
+                <div class="rule-card">
+                    <h3>Confirmation</h3>
+
+                    <p>
+                        Must match the password.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Validation Summary</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Check</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Empty value</td>
+                            <td><code>value === ""</code></td>
+                        </tr>
+
+                        <tr>
+                            <td>Minimum length</td>
+                            <td><code>value.length &lt; 3</code></td>
+                        </tr>
+
+                        <tr>
+                            <td>Email structure</td>
+                            <td><code>value.includes("@")</code></td>
+                        </tr>
+
+                        <tr>
+                            <td>Matching passwords</td>
+                            <td><code>password !== confirmation</code></td>
+                        </tr>
+
+                        <tr>
+                            <td>Checkbox</td>
+                            <td><code>checkbox.checked</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Learning Practice</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
