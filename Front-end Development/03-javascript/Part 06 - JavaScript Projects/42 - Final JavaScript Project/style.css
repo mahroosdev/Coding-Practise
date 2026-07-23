@@ -1,0 +1,384 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #e5e7eb;
+    color: #1f2937;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+header {
+    background-color: darkblue;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+}
+
+section {
+    background-color: white;
+    border: 2px solid darkblue;
+    margin: 30px 0;
+    padding: 30px;
+}
+
+section h2,
+.feature-card h3 {
+    color: darkblue;
+    margin-top: 0;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.summary-card {
+    background-color: #e6ecf5;
+    border-left: 6px solid darkblue;
+    padding: 20px;
+    text-align: center;
+}
+
+.summary-card h3 {
+    margin: 0 0 10px;
+    font-size: 17px;
+}
+
+.summary-card p {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.balance-card {
+    border-left-color: darkblue;
+}
+
+.income-card {
+    border-left-color: darkgreen;
+}
+
+.income-card p {
+    color: darkgreen;
+}
+
+.expense-card {
+    border-left-color: darkred;
+}
+
+.expense-card p {
+    color: darkred;
+}
+
+.transaction-card {
+    border-left-color: darkorange;
+}
+
+.transaction-card p {
+    color: darkorange;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: darkblue;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    border: 2px solid darkblue;
+    padding: 12px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    outline: 3px solid lightblue;
+}
+
+button {
+    background-color: darkblue;
+    color: white;
+    border: 2px solid darkblue;
+    padding: 11px 18px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: darkblue;
+}
+
+button:disabled {
+    background-color: #9ca3af;
+    color: white;
+    border-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+.secondary-button {
+    background-color: white;
+    color: darkblue;
+}
+
+.secondary-button:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+.danger-button {
+    background-color: darkred;
+    border-color: darkred;
+}
+
+.danger-button:hover {
+    background-color: white;
+    color: darkred;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.error-message {
+    min-height: 25px;
+    color: darkred;
+    font-weight: bold;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.section-heading p {
+    margin-bottom: 0;
+}
+
+.control-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+}
+
+.visible-count {
+    color: darkblue;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #9ca3af;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: darkblue;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f3f4f6;
+}
+
+tbody tr:hover {
+    background-color: #e6ecf5;
+}
+
+.transaction-description {
+    font-weight: bold;
+}
+
+.category-label,
+.type-label {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 4px 10px;
+    color: white;
+    font-size: 13px;
+}
+
+.category-label {
+    background-color: #4b5563;
+}
+
+.type-income {
+    background-color: darkgreen;
+}
+
+.type-expense {
+    background-color: darkred;
+}
+
+.amount-income {
+    color: darkgreen;
+    font-weight: bold;
+}
+
+.amount-expense {
+    color: darkred;
+    font-weight: bold;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.action-button {
+    padding: 7px 10px;
+    font-size: 14px;
+}
+
+.edit-button {
+    background-color: darkgreen;
+    border-color: darkgreen;
+}
+
+.edit-button:hover {
+    color: darkgreen;
+}
+
+.delete-button {
+    background-color: darkred;
+    border-color: darkred;
+}
+
+.delete-button:hover {
+    color: darkred;
+}
+
+.empty-message {
+    background-color: lightyellow;
+    border-left: 5px solid darkblue;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: #e6ecf5;
+    border-left: 5px solid darkblue;
+    padding: 20px;
+}
+
+.feature-card p {
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: darkblue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .control-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .form-grid,
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .section-heading button {
+        width: 100%;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .form-buttons button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 94%;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    section {
+        margin: 20px 0;
+        padding: 20px;
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Tracker Project</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Expense Tracker Project</h1>
+
+            <p>
+                Track income and expenses using JavaScript,
+                dynamic records, filtering, and local storage.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>Financial Summary</h2>
+
+            <div class="summary-grid">
+
+                <article class="summary-card balance-card">
+                    <h3>Current Balance</h3>
+
+                    <p id="balance-amount">
+                        $0.00
+                    </p>
+                </article>
+
+                <article class="summary-card income-card">
+                    <h3>Total Income</h3>
+
+                    <p id="income-amount">
+                        $0.00
+                    </p>
+                </article>
+
+                <article class="summary-card expense-card">
+                    <h3>Total Expenses</h3>
+
+                    <p id="expense-amount">
+                        $0.00
+                    </p>
+                </article>
+
+                <article class="summary-card transaction-card">
+                    <h3>Transactions</h3>
+
+                    <p id="transaction-count">
+                        0
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section>
+            <h2 id="form-title">
+                Add Transaction
+            </h2>
+
+            <form id="transaction-form">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="description-input">
+                            Description
+                        </label>
+
+                        <input
+                            type="text"
+                            id="description-input"
+                            placeholder="Example: Salary or Groceries"
+                            maxlength="100"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amount-input">
+                            Amount
+                        </label>
+
+                        <input
+                            type="number"
+                            id="amount-input"
+                            placeholder="Enter amount"
+                            min="0.01"
+                            step="0.01"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="type-select">
+                            Transaction Type
+                        </label>
+
+                        <select id="type-select">
+                            <option value="expense">
+                                Expense
+                            </option>
+
+                            <option value="income">
+                                Income
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category-select">
+                            Category
+                        </label>
+
+                        <select id="category-select">
+                            <option value="">
+                                Choose a category
+                            </option>
+
+                            <option value="Salary">
+                                Salary
+                            </option>
+
+                            <option value="Freelance">
+                                Freelance
+                            </option>
+
+                            <option value="Food">
+                                Food
+                            </option>
+
+                            <option value="Transport">
+                                Transport
+                            </option>
+
+                            <option value="Shopping">
+                                Shopping
+                            </option>
+
+                            <option value="Bills">
+                                Bills
+                            </option>
+
+                            <option value="Education">
+                                Education
+                            </option>
+
+                            <option value="Entertainment">
+                                Entertainment
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date-input">
+                            Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="date-input"
+                        >
+                    </div>
+
+                </div>
+
+                <p class="error-message" id="form-error"></p>
+
+                <div class="form-buttons">
+
+                    <button type="submit" id="submit-button">
+                        Add Transaction
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancel-edit-button"
+                        class="secondary-button hidden"
+                    >
+                        Cancel Edit
+                    </button>
+
+                </div>
+
+            </form>
+        </section>
+
+        <section>
+            <div class="section-heading">
+
+                <div>
+                    <h2>Transaction Controls</h2>
+
+                    <p>
+                        Search and filter the transaction history.
+                    </p>
+                </div>
+
+                <button
+                    type="button"
+                    id="clear-all-button"
+                    class="danger-button"
+                >
+                    Clear All
+                </button>
+
+            </div>
+
+            <div class="control-grid">
+
+                <div class="form-group">
+                    <label for="search-input">
+                        Search Transactions
+                    </label>
+
+                    <input
+                        type="search"
+                        id="search-input"
+                        placeholder="Search description or category"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="type-filter">
+                        Filter by Type
+                    </label>
+
+                    <select id="type-filter">
+                        <option value="all">
+                            All Types
+                        </option>
+
+                        <option value="income">
+                            Income
+                        </option>
+
+                        <option value="expense">
+                            Expenses
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="category-filter">
+                        Filter by Category
+                    </label>
+
+                    <select id="category-filter">
+                        <option value="all">
+                            All Categories
+                        </option>
+
+                        <option value="Salary">
+                            Salary
+                        </option>
+
+                        <option value="Freelance">
+                            Freelance
+                        </option>
+
+                        <option value="Food">
+                            Food
+                        </option>
+
+                        <option value="Transport">
+                            Transport
+                        </option>
+
+                        <option value="Shopping">
+                            Shopping
+                        </option>
+
+                        <option value="Bills">
+                            Bills
+                        </option>
+
+                        <option value="Education">
+                            Education
+                        </option>
+
+                        <option value="Entertainment">
+                            Entertainment
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+                    </select>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="section-heading">
+
+                <div>
+                    <h2>Transaction History</h2>
+
+                    <p id="transaction-summary">
+                        No transactions have been added.
+                    </p>
+                </div>
+
+                <p class="visible-count" id="visible-count">
+                    0 visible
+                </p>
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Type</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="transaction-table-body"></tbody>
+                </table>
+
+            </div>
+
+            <div class="empty-message" id="empty-message">
+                No transactions match the current search or filters.
+            </div>
+        </section>
+
+        <section>
+            <h2>Project Features</h2>
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+                    <h3>Transaction Management</h3>
+
+                    <p>
+                        Add, edit, and delete income and expense records.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Financial Calculations</h3>
+
+                    <p>
+                        Automatically calculate balance, income,
+                        and expenses.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Search and Filters</h3>
+
+                    <p>
+                        Find transactions using description,
+                        category, and type.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Local Storage</h3>
+
+                    <p>
+                        Financial records remain after refreshing
+                        the browser.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Projects</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
