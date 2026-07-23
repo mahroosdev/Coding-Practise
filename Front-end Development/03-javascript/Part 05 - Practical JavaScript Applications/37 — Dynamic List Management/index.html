@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dynamic List Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Dynamic List Management</h1>
+
+            <p>
+                Add, complete, and delete tasks using practical JavaScript.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>Task List</h2>
+
+            <form id="task-form">
+
+                <label for="task-input">
+                    New Task
+                </label>
+
+                <div class="input-group">
+                    <input
+                        type="text"
+                        id="task-input"
+                        placeholder="Enter a task"
+                    >
+
+                    <button type="submit">
+                        Add Task
+                    </button>
+                </div>
+
+                <p class="error-message" id="error-message"></p>
+
+            </form>
+
+            <div class="task-information">
+                <p id="total-tasks">
+                    Total tasks: 0
+                </p>
+
+                <p id="completed-tasks">
+                    Completed tasks: 0
+                </p>
+            </div>
+
+            <ul class="task-list" id="task-list"></ul>
+
+            <div class="empty-message" id="empty-message">
+                No tasks have been added yet.
+            </div>
+
+            <button
+                type="button"
+                id="clear-completed-button"
+                class="secondary-button"
+            >
+                Clear Completed Tasks
+            </button>
+        </section>
+
+        <section>
+            <h2>Concepts Used</h2>
+
+            <div class="concept-grid">
+
+                <article class="concept-card">
+                    <h3>Create Elements</h3>
+                    <p>Creates new list items and buttons.</p>
+                </article>
+
+                <article class="concept-card">
+                    <h3>Append Elements</h3>
+                    <p>Adds new elements to the webpage.</p>
+                </article>
+
+                <article class="concept-card">
+                    <h3>Event Listeners</h3>
+                    <p>Handles complete and delete actions.</p>
+                </article>
+
+                <article class="concept-card">
+                    <h3>Remove Elements</h3>
+                    <p>Deletes tasks from the list.</p>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Practical Applications</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
