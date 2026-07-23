@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Forms and Input Values</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Forms and Input Values</h1>
+
+            <p>
+                Learning how JavaScript reads and uses information
+                entered into an HTML form.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>Reading Form Values</h2>
+
+            <p>
+                JavaScript uses the <code>value</code> property to read
+                information entered into form fields.
+            </p>
+
+            <div class="code-box">
+                <code>const name = nameInput.value;</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>1. Live Input Value</h2>
+
+            <label for="live-name">
+                Enter your name:
+            </label>
+
+            <input
+                type="text"
+                id="live-name"
+                placeholder="Type your name"
+            >
+
+            <div class="output-box" id="live-output">
+                Your entered name will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Registration Form</h2>
+
+            <form id="registration-form">
+
+                <div class="form-group">
+                    <label for="student-name">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="student-name"
+                        placeholder="Enter your name"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="student-email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="student-email"
+                        placeholder="Enter your email"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="course">
+                        Select Course
+                    </label>
+
+                    <select id="course">
+                        <option value="">Choose a course</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                    </select>
+                </div>
+
+                <div class="checkbox-group">
+                    <input
+                        type="checkbox"
+                        id="terms"
+                    >
+
+                    <label for="terms">
+                        I agree to the terms
+                    </label>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit">
+                        Submit Form
+                    </button>
+
+                    <button type="reset" class="secondary-button">
+                        Reset Form
+                    </button>
+                </div>
+
+            </form>
+
+            <div class="output-box" id="form-output">
+                Submitted form information will appear here.
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Form Properties</h2>
+
+            <div class="property-grid">
+
+                <div class="property-card">
+                    <h3>value</h3>
+
+                    <p>
+                        Reads the value of text fields and select elements.
+                    </p>
+                </div>
+
+                <div class="property-card">
+                    <h3>checked</h3>
+
+                    <p>
+                        Checks whether a checkbox is selected.
+                    </p>
+                </div>
+
+                <div class="property-card">
+                    <h3>preventDefault()</h3>
+
+                    <p>
+                        Stops the form from refreshing the page.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Form Event Summary</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Property or Event</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><code>value</code></td>
+                            <td>Reads an input value</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>checked</code></td>
+                            <td>Reads a checkbox state</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>input</code></td>
+                            <td>Runs when an input value changes</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>submit</code></td>
+                            <td>Runs when a form is submitted</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>reset</code></td>
+                            <td>Runs when a form is reset</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Learning Practice</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
