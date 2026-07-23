@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Search and Filter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Search and Filter</h1>
+
+            <p>
+                Search and filter a list of development technologies.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>Technology Search</h2>
+
+            <label for="search-input">
+                Search technologies
+            </label>
+
+            <input
+                type="search"
+                id="search-input"
+                placeholder="Search by name or category"
+            >
+
+            <div class="search-information">
+                <p id="result-count">
+                    8 results found
+                </p>
+
+                <button type="button" id="clear-search-button">
+                    Clear Search
+                </button>
+            </div>
+        </section>
+
+        <section>
+            <div class="technology-grid" id="technology-grid">
+
+                <article
+                    class="technology-card"
+                    data-name="HTML"
+                    data-category="Frontend"
+                >
+                    <h2>HTML</h2>
+                    <p>Frontend</p>
+                </article>
+
+                <article
+                    class="technology-card"
+                    data-name="CSS"
+                    data-category="Frontend"
+                >
+                    <h2>CSS</h2>
+                    <p>Frontend</p>
+                </article>
+
+                <article
+                    class="technology-card"
+                    data-name="JavaScript"
+                    data-category="Programming"
+                >
+                    <h2>JavaScript</h2>
+                    <p>Programming</p>
+                </article>
+
+                <article
+                    class="technology-card"
+                    data-name="React"
+                    data-category="Frontend Framework"
+                >
+                    <h2>React</h2>
+                    <p>Frontend Framework</p>
+                </article>
+
+                <article
+                    class="technology-card"
+                    data-name="Node.js"
+                    data-category="Backend"
+                >
+                    <h2>Node.js</h2>
+                    <p>Backend</p>
+                </article>
+
+                <article
+                    class="technology-card"
+                    data-name="Express.js"
+                    data-category="Backend Framework"
+                >
+                    <h2>Express.js</h2>
+                    <p>Backend Framework</p>
+                </article>
+
+                <article
+                    class="technology-card"
+                    data-name="MongoDB"
+                    data-category="Database"
+                >
+                    <h2>MongoDB</h2>
+                    <p>Database</p>
+                </article>
+
+                <article
+                    class="technology-card"
+                    data-name="Git"
+                    data-category="Development Tool"
+                >
+                    <h2>Git</h2>
+                    <p>Development Tool</p>
+                </article>
+
+            </div>
+
+            <div class="empty-message hidden" id="empty-message">
+                No matching technologies were found.
+            </div>
+        </section>
+
+        <section>
+            <h2>Concepts Used</h2>
+
+            <div class="concept-grid">
+
+                <article class="concept-card">
+                    <h3>Input Value</h3>
+                    <p>Reads the user's search text.</p>
+                </article>
+
+                <article class="concept-card">
+                    <h3>Loop</h3>
+                    <p>Checks every technology card.</p>
+                </article>
+
+                <article class="concept-card">
+                    <h3>includes()</h3>
+                    <p>Checks whether text contains the search value.</p>
+                </article>
+
+                <article class="concept-card">
+                    <h3>CSS Class</h3>
+                    <p>Hides cards that do not match.</p>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Practical Applications</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
