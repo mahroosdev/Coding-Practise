@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Local Storage</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>JavaScript Local Storage</h1>
+
+            <p>
+                Save browser data and restore it after refreshing the page.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>Save User Information</h2>
+
+            <form id="profile-form">
+
+                <div class="form-group">
+                    <label for="name-input">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name-input"
+                        placeholder="Enter your name"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="role-input">
+                        Role
+                    </label>
+
+                    <input
+                        type="text"
+                        id="role-input"
+                        placeholder="Enter your role"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="theme-select">
+                        Preferred Theme
+                    </label>
+
+                    <select id="theme-select">
+                        <option value="">Choose a theme</option>
+                        <option value="Light">Light</option>
+                        <option value="Dark">Dark</option>
+                        <option value="Blue">Blue</option>
+                    </select>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit">
+                        Save Information
+                    </button>
+
+                    <button
+                        type="button"
+                        id="load-button"
+                        class="secondary-button"
+                    >
+                        Load Saved Information
+                    </button>
+
+                    <button
+                        type="button"
+                        id="remove-button"
+                        class="danger-button"
+                    >
+                        Remove Saved Information
+                    </button>
+                </div>
+
+                <p class="error-message" id="error-message"></p>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>Saved Profile</h2>
+
+            <div class="profile-card" id="profile-card">
+
+                <p>
+                    <strong>Name:</strong>
+                    <span id="saved-name">Not saved</span>
+                </p>
+
+                <p>
+                    <strong>Role:</strong>
+                    <span id="saved-role">Not saved</span>
+                </p>
+
+                <p>
+                    <strong>Theme:</strong>
+                    <span id="saved-theme">Not saved</span>
+                </p>
+
+            </div>
+
+            <p class="status-message" id="status-message">
+                No browser data has been loaded.
+            </p>
+        </section>
+
+        <section>
+            <h2>Local Storage Concepts</h2>
+
+            <div class="concept-grid">
+
+                <article class="concept-card">
+                    <h3>setItem()</h3>
+
+                    <p>
+                        Saves a value inside local storage.
+                    </p>
+                </article>
+
+                <article class="concept-card">
+                    <h3>getItem()</h3>
+
+                    <p>
+                        Reads a saved value.
+                    </p>
+                </article>
+
+                <article class="concept-card">
+                    <h3>removeItem()</h3>
+
+                    <p>
+                        Removes saved information.
+                    </p>
+                </article>
+
+                <article class="concept-card">
+                    <h3>JSON</h3>
+
+                    <p>
+                        Converts objects into strings and back.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Practical Applications</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
