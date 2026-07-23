@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simple Counter Project</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Simple Counter Project</h1>
+
+            <p>
+                A complete JavaScript counter with custom settings,
+                history, validation, and local storage.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="counter-section">
+
+            <div class="counter-heading">
+                <div>
+                    <h2>Counter</h2>
+
+                    <p id="range-message">
+                        Allowed range: 0 to 100
+                    </p>
+                </div>
+
+                <p class="save-status" id="save-status">
+                    Counter state loaded.
+                </p>
+            </div>
+
+            <div class="counter-display" id="counter-display">
+                <span id="counter-value">0</span>
+            </div>
+
+            <p class="counter-message" id="counter-message">
+                The counter is at its minimum value.
+            </p>
+
+            <div class="counter-buttons">
+
+                <button
+                    type="button"
+                    id="decrease-button"
+                >
+                    − Decrease
+                </button>
+
+                <button
+                    type="button"
+                    id="reset-button"
+                    class="secondary-button"
+                >
+                    Reset
+                </button>
+
+                <button
+                    type="button"
+                    id="increase-button"
+                >
+                    + Increase
+                </button>
+
+            </div>
+
+        </section>
+
+        <section>
+            <h2>Counter Settings</h2>
+
+            <form id="settings-form">
+
+                <div class="settings-grid">
+
+                    <div class="form-group">
+                        <label for="step-input">
+                            Step Value
+                        </label>
+
+                        <input
+                            type="number"
+                            id="step-input"
+                            min="1"
+                            value="1"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="minimum-input">
+                            Minimum Value
+                        </label>
+
+                        <input
+                            type="number"
+                            id="minimum-input"
+                            value="0"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="maximum-input">
+                            Maximum Value
+                        </label>
+
+                        <input
+                            type="number"
+                            id="maximum-input"
+                            value="100"
+                        >
+                    </div>
+
+                </div>
+
+                <p class="error-message" id="settings-error"></p>
+
+                <button type="submit">
+                    Apply Settings
+                </button>
+
+            </form>
+        </section>
+
+        <section>
+            <div class="history-heading">
+                <div>
+                    <h2>Counter History</h2>
+
+                    <p>
+                        Recent counter actions appear below.
+                    </p>
+                </div>
+
+                <button
+                    type="button"
+                    id="clear-history-button"
+                    class="danger-button"
+                >
+                    Clear History
+                </button>
+            </div>
+
+            <ul class="history-list" id="history-list"></ul>
+
+            <div class="empty-message" id="empty-history-message">
+                No counter actions have been recorded.
+            </div>
+        </section>
+
+        <section>
+            <h2>Project Features</h2>
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+                    <h3>Custom Step</h3>
+
+                    <p>
+                        The counter can increase or decrease by a
+                        selected amount.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Range Limits</h3>
+
+                    <p>
+                        Minimum and maximum values prevent invalid
+                        counter changes.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>History</h3>
+
+                    <p>
+                        Every important counter action is recorded.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Local Storage</h3>
+
+                    <p>
+                        Counter settings and history remain after a
+                        page refresh.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Projects</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

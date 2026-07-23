@@ -1,0 +1,302 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #e5e7eb;
+    color: #1f2937;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 950px;
+    margin: auto;
+}
+
+header {
+    background-color: darkblue;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+}
+
+section {
+    background-color: white;
+    border: 2px solid darkblue;
+    margin: 30px 0;
+    padding: 30px;
+}
+
+section h2,
+.feature-card h3 {
+    color: darkblue;
+    margin-top: 0;
+}
+
+.counter-heading,
+.history-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.counter-heading p,
+.history-heading p {
+    margin-bottom: 0;
+}
+
+.save-status {
+    color: darkgreen;
+    font-weight: bold;
+}
+
+.counter-section {
+    text-align: center;
+}
+
+.counter-heading {
+    text-align: left;
+}
+
+.counter-display {
+    width: 210px;
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6ecf5;
+    border: 7px solid darkblue;
+    border-radius: 50%;
+    margin: 35px auto 20px;
+    transition: 0.2s;
+}
+
+.counter-display.minimum-state {
+    background-color: lightyellow;
+}
+
+.counter-display.maximum-state {
+    background-color: #ffe4e4;
+    border-color: darkred;
+}
+
+.counter-display span {
+    color: darkblue;
+    font-size: 65px;
+    font-weight: bold;
+}
+
+.counter-display.maximum-state span {
+    color: darkred;
+}
+
+.counter-message {
+    min-height: 28px;
+    color: darkblue;
+    font-weight: bold;
+}
+
+.counter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+button {
+    background-color: darkblue;
+    color: white;
+    border: 2px solid darkblue;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: darkblue;
+}
+
+button:disabled {
+    background-color: #9ca3af;
+    color: white;
+    border-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+.secondary-button {
+    background-color: white;
+    color: darkblue;
+}
+
+.secondary-button:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+.danger-button {
+    background-color: darkred;
+    border-color: darkred;
+}
+
+.danger-button:hover {
+    background-color: white;
+    color: darkred;
+}
+
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: darkblue;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    border: 2px solid darkblue;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    outline: 3px solid lightblue;
+}
+
+.error-message {
+    min-height: 25px;
+    color: darkred;
+    font-weight: bold;
+}
+
+.history-list {
+    padding: 0;
+    list-style: none;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #e6ecf5;
+    border-left: 5px solid darkblue;
+    margin-bottom: 12px;
+    padding: 14px 18px;
+}
+
+.history-action {
+    color: darkblue;
+    font-weight: bold;
+}
+
+.history-time {
+    color: #4b5563;
+    white-space: nowrap;
+}
+
+.empty-message {
+    background-color: lightyellow;
+    border-left: 5px solid darkblue;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: #e6ecf5;
+    border-left: 5px solid darkblue;
+    padding: 20px;
+}
+
+.feature-card p {
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: darkblue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media screen and (max-width: 750px) {
+    .counter-heading,
+    .history-heading {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .settings-grid,
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .counter-buttons {
+        flex-direction: column;
+    }
+
+    .counter-buttons button,
+    .history-heading button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .container {
+        width: 94%;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    section {
+        margin: 20px 0;
+        padding: 20px;
+    }
+
+    .counter-display {
+        width: 165px;
+        height: 165px;
+    }
+
+    .counter-display span {
+        font-size: 50px;
+    }
+
+    .history-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
