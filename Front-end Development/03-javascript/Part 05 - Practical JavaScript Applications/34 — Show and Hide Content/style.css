@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #e5e7eb;
+    color: #1f2937;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+header {
+    background-color: darkblue;
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+}
+
+section {
+    background-color: white;
+    border: 2px solid darkblue;
+    margin: 30px 0;
+    padding: 30px;
+}
+
+section h2,
+.article-card h3,
+.concept-card h3 {
+    color: darkblue;
+    margin-top: 0;
+}
+
+button {
+    background-color: darkblue;
+    color: white;
+    border: 2px solid darkblue;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: darkblue;
+}
+
+.password-group {
+    display: flex;
+    gap: 10px;
+}
+
+.password-group input {
+    flex: 1;
+    min-width: 0;
+    border: 2px solid darkblue;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.status-message {
+    color: darkblue;
+    font-weight: bold;
+}
+
+.article-card {
+    background-color: #e6ecf5;
+    border-left: 5px solid darkblue;
+    padding: 25px;
+}
+
+.extra-content {
+    border-top: 1px solid #9ca3af;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.hidden-content {
+    display: none;
+}
+
+.notice-box {
+    background-color: lightyellow;
+    border-left: 5px solid darkblue;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.concept-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.concept-card {
+    background-color: #e6ecf5;
+    border-left: 5px solid darkblue;
+    padding: 20px;
+}
+
+.concept-card p {
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: darkblue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media screen and (max-width: 650px) {
+    .password-group {
+        flex-direction: column;
+    }
+
+    .password-group button {
+        width: 100%;
+    }
+
+    .concept-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 94%;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    section {
+        margin: 20px 0;
+        padding: 20px;
+    }
+}

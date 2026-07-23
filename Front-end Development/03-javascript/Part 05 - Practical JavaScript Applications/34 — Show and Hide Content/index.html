@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Show and Hide Content</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Show and Hide Content</h1>
+
+            <p>
+                Practical JavaScript examples using boolean state,
+                DOM properties, and CSS classes.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>Show and Hide Password</h2>
+
+            <p>
+                Click the button to show or hide the password.
+            </p>
+
+            <div class="password-group">
+                <input
+                    type="password"
+                    id="password-input"
+                    value="JavaScript123"
+                    aria-label="Password"
+                >
+
+                <button
+                    type="button"
+                    id="password-button"
+                    aria-pressed="false"
+                >
+                    Show Password
+                </button>
+            </div>
+
+            <p class="status-message" id="password-status">
+                The password is hidden.
+            </p>
+        </section>
+
+        <section>
+            <h2>Expand and Collapse Content</h2>
+
+            <article class="article-card">
+                <h3>Why Learn JavaScript?</h3>
+
+                <p>
+                    JavaScript adds behaviour and interactivity to websites.
+                </p>
+
+                <div
+                    class="extra-content hidden-content"
+                    id="extra-content"
+                >
+                    <p>
+                        JavaScript can update webpage content, respond to
+                        user actions, validate forms, store browser data,
+                        and build complete web applications.
+                    </p>
+
+                    <p>
+                        Learning JavaScript helps connect HTML structure
+                        and CSS design with interactive behaviour.
+                    </p>
+                </div>
+
+                <button
+                    type="button"
+                    id="content-button"
+                    aria-expanded="false"
+                    aria-controls="extra-content"
+                >
+                    Read More
+                </button>
+            </article>
+        </section>
+
+        <section>
+            <h2>Show and Hide a Message</h2>
+
+            <button type="button" id="message-button">
+                Hide Message
+            </button>
+
+            <div class="notice-box" id="notice-box">
+                This message can be shown or hidden using JavaScript.
+            </div>
+        </section>
+
+        <section>
+            <h2>JavaScript Concepts Used</h2>
+
+            <div class="concept-grid">
+
+                <article class="concept-card">
+                    <h3>Boolean State</h3>
+                    <p>Tracks whether content is visible or hidden.</p>
+                </article>
+
+                <article class="concept-card">
+                    <h3>Input Type</h3>
+                    <p>Changes between password and text.</p>
+                </article>
+
+                <article class="concept-card">
+                    <h3>CSS Classes</h3>
+                    <p>Controls content visibility.</p>
+                </article>
+
+                <article class="concept-card">
+                    <h3>Button Labels</h3>
+                    <p>Change based on the current state.</p>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Practical Applications</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
